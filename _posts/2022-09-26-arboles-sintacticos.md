@@ -3,12 +3,13 @@ layout: post
 title: Árboles sintácticos
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+# LaTeX
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
+LaTeX es un sistema usado para la composición de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de textos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica, por ejemplo, en generar diagramas de diferentes clase a través de gráficos vectoriales (PGF/TikZ) y complejas fórmulas matemáticas con su modo matemático. LaTeX tiene una sinfinidad de paquetes que siempre se adecuan a nuestras necesidades.
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+En el caso de la lingüística, cabe resaltar que se puede usar para escribir símbolos fonéticos (con tipa), glosas (con gb4e o Covington), estructuras de representación del discurso, árboles de dependencia y árboles sintácticos. Como     
 
+## Creando nuestras primeras representaciones 
 
 ```{=latex}
 \begin{tabular}{ll}
