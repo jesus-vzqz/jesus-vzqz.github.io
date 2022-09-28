@@ -3,7 +3,7 @@ layout: post
 title: Árboles sintácticos
 ---
 
-# Breves aproximaciones a LaTeX
+## Breves aproximaciones a LaTeX
 
 LaTeX es un lenguaje de marcado --basado en TeX-- usado para el procesamiento de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de escritos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica, por ejemplo, en generar diagramas de diferentes clase a través de gráficos vectoriales (PGF/TikZ) y complejas fórmulas matemáticas gracias su modo matemático. LaTeX tiene una sinfinidad de paquetes que siempre se adecuan a nuestras necesidades.
 
