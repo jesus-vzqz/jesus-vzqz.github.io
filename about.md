@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+Estudiante de lingüística y entusiaste de la programación.
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+Estudiante del doctorado en lingüística en El Colegio de México. Mis intereses se centran en la sintaxis y semántica formal y lingüística computacional. :D
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[email@domain.com](mailto:jesus.vazquez@colmex.mx)
