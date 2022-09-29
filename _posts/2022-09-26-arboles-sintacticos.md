@@ -7,7 +7,7 @@ LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamien
 
 En el caso de la lingüística, resulta muy útil porque existen un conjunto de paquetes que nos permiten escribir símbolos fonéticos (con **tipa**), glosas (con **gb4e** o **covington**), enumeración de ejemplos (con **gb4e,  ling-macros, linguex o philex** ), estructuras de representación del discurso (con **drs**), árboles de dependencia (con **TikZ-dependency**) y árboles sintácticos (con **xyling, xy, tikz-qtree o forest**), etc. Dada esta breve presentación de paquetes, cabría que considerar si el aprendezije y el uso de estos forma parte de nuestra formación profesional como lingüístas. ¡Yo pienso que sí! Incluso el aprendizaje de cosas nuevas siempre puede resultarnos satisfactorio.
 
-En fin, a lo largo de este *post*, me enfocaré en explicar como podemos dibujar árboles sintácticos sencillamente con **forest** porque creo que es un paquete bastante intuitivo para la elaboración de representaciones árboreas. También, para lograr mi objetivo, consideraré que el lector ya cuenta con algunos conocimientos básicos en el uso LaTeX; si este no es el caso existen muy buenos manuales en internet. 
+En fin, a lo largo de este *post*, me enfocaré en explicar algunas maneras en las que podemos dibujar árboles sintácticos con **forest** porque creo que es un paquete bastante intuitivo para la elaboración de representaciones árboreas. Además, para lograr este objetivo, consideraré que el lector ya cuenta con algunos conocimientos básicos en el uso LaTeX; si este no es el caso existen muy buenos manuales en internet. 
 
 Añado un curso que posiblemente pueda interesar:
 
@@ -26,7 +26,7 @@ Para comenzar, tendremos que cargar el paquete de forest en el preámbulo de nue
 
 ```
 
-Una cuestión importante que debemos mencionar es que cuando hacemos representaciones sintácticas en español es que este paquete tiene conflicto al momento 
+Una cuestión importante que debemos tomar en cuenta para futuro es que al momento de hacer las flechas de los movimientos sintácticos que conectan los nodos,  **forest** tiene conflicto con algunos caracteres del paquete **babel** en español. Para evitar este problema, tenemos que escribir lo siguiente: 
 
 
 ```{=latex}
@@ -34,6 +34,23 @@ Una cuestión importante que debemos mencionar es que cuando hacemos representac
 \usepackage[spanish, es-noshorthands]{babel}
 
 ```
+
+Esto nos mantendrá prevenidos para futuros errores que pueden occurrir. Muy bien, ahora dentro del cuerpo de nuestro documento, llamaremos al ambiente de **forest**. La sintaxis básica de este paquete consiste en
+
+```{=latex}
+
+\begin{document}
+
+\begin{forest}
+
+[1 [2] [3]]
+
+\end{forest}
+
+\end{document}
+```
+
+
 
 
 ```{=latex}
