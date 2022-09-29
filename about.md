@@ -12,4 +12,4 @@ Estudiante del doctorado en lingüística en El Colegio de México. Mis interese
 
 ### Contact me
 
-[jesus.vazquez@colmex.mx](jesus.vazquez@colmex.mx)
+[jesus.vazquez@colmex.mx]()
