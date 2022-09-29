@@ -9,7 +9,7 @@ LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamien
 
 En el caso de la lingüística, resulta muy útil porque existen un conjunto de paquetes que nos permiten escribir símbolos fonéticos (con **tipa**), glosas (con **gb4e** o **covington**), enumeración de ejemplos (con **gb4e,  ling-macros, linguex o philex** ), estructuras de representación del discurso (con **drs**), árboles de dependencia (con **TikZ-dependency**) y árboles sintácticos (con **xyling, xy, tikz-qtree o forest**), etc. Dada esta breve presentación de paquetes, cabría que considerar si el aprendezije y el uso de estos forma parte de nuestra formación profesional como lingüístas. ¡Yo pienso que sí! Incluso el aprendizaje de cosas nuevas siempre puede resultarnos satisfactorio.
 
-En fin, a lo largo de este *post*, me enfocaré en explicar algunas maneras en las que podemos dibujar árboles sintácticos con **forest** porque creo que es un paquete bastante intuitivo para la elaboración de representaciones árboreas. Además, para lograr este objetivo, consideraré que el lector ya cuenta con algunos conocimientos básicos en el uso LaTeX; si este no es el caso existen muy buenos manuales en internet. 
+En fin, a lo largo de este *post*, me enfocaré en explicar algunas maneras en las que podemos dibujar árboles sintácticos con **forest** porque pienso que es un paquete bastante intuitivo para la elaboración de representaciones árboreas. Además, para lograr este objetivo, consideraré que el lector ya cuenta con algunos conocimientos básicos en el uso LaTeX; si este no es el caso existen muy buenos manuales en internet. 
 
 Añado un curso que posiblemente pueda interesar:
 
@@ -54,7 +54,7 @@ Compilamos y  produce:
 
 ![Primer ejemplo](/images/post_1/ejemplo1.png)
 
-Si hemos comprendido esto, ya estamos a la mitad del camino para construir diagramas mucho más complejos, pero antes repitamos este mismo proceso y hagámos otras combinaciones para practicar.
+Si hemos comprendido esto, ya estamos a la mitad del camino para construir diagramas mucho más complejos, pero antes repitamos este mismo proceso y hagamos otras combinaciones para practicar.
 
 ```{=latex}
 
@@ -77,7 +77,47 @@ Si hemos comprendido esto, ya estamos a la mitad del camino para construir diagr
 
 ### Creando el esquema X-barra
 
+Daremos un paso más allá y trataremos de dibujar el esquema de X-barra. Lo primero que debemos de saber es que temos una proyección máxima **SX**, que domina dos nodos: **SY** y **X'**. Hay que recordar que el primero es la posición del especificador y el segundo, de la proyección intermedia. Además, tenemos una proyección intermedia **X'**  que domina dos nodos: el núcleo sobre el cuál se proyecta toda la estructura **X<sup>0</sup>** y el complemento **SZ**. De todo esto, primero, podemos empeñarnos en construir la parte de arriba:
 
+```{=latex}
+
+\usepackage{philex} %Utilizamos este paquete para la numeración de nuestros ejemplos, diagramas, etc.
+
+\begin{document}
+
+\lb{ejemploxbar1}{
+\begin{forest}
+    [SX [SY] [X'] ]
+\end{forest}
+    }
+
+\end{document}
+```
+
+Puede resultar un poco confuso este segmento de código, pero, con el fin de enumerar nuestro esquema, solamente  hemos añadido un ambiente del paquete **philex**. Expliquemos un poco este ámbiente *lb{}{}*: dentro de las primera llaves **{}** escribimos un identificador de nuestro ejemplo, para usarlo más tarde en alguna referencias cruzadas a lo largo del escrito de nuestro texto y tener control de ellos; yo he utilizado *ejemploxbar1*, pero puede llevar cualquier otro que deseen. En las segundas llaves, hemos anidado el ambiente de **forest**. 
+
+En cuanto al encorchetado dentro de este ámbiente, observamos quete principal, el más externo **SX**, contiene otros dos: **SX** y **X'** . Después de compilarlo, obtenemos el siguiente resultado:
+
+![Cuarto ejemplo](/images/post_1/ejemplo4.png)
+
+mlkl
+
+Como podemos observar, nuestro esquema de X-barra sigue incompleto falta añadir 
+
+
+
+```{=latex}
+
+\lb{ejemploxbar2}{
+\begin{forest}
+    [SX [SY] [X' [X' [X$^0$] [SZ]] [SW] ] ]
+\end{forest}
+    }
+    
+```
+
+Como
+    
 ```{=latex}
 
 \usepackage[spanish]{babel}
