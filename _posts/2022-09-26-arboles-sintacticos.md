@@ -7,13 +7,13 @@ title: Árboles sintácticos
 
 ## 1. Intro
 
-LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamiento de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de escritos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica en generar, p. ej., diagramas de diferente clase (diagramas de flujo, grafos, árboles de decisión, automátas, etc) a través de gráficos vectoriales (`PGF/TikZ`) y complejas fórmulas matemáticas gracias su **modo matemático**. ¡LaTeX es una herramienta versátil!, ya que cuenta con una sinfinidad de paquetes que siempre se ajustan a nuestras necesidades.
+LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamiento de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de escritos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica en generar, p. ej., diagramas de flujo, grafos, árboles de decisión, automátas, etc. a través de gráficos vectoriales (`PGF/TikZ`) y complejas fórmulas matemáticas gracias su **modo matemático**. ¡LaTeX es una herramienta versátil!, ya que cuenta con una sinfinidad de paquetes que siempre se ajustan a nuestras necesidades.
 
-En el caso de la lingüística, resulta muy útil porque existen un conjunto de paquetes que nos permiten escribir símbolos fonéticos (con **tipa**), glosas (con `gb4e` o `covington`), enumeración de ejemplos (con `gb4e`,  `ling-macros`, `linguex o philex` ), estructuras de representación del discurso (con `drs`), árboles de dependencia (con `TikZ-dependency`) y árboles sintácticos (con `xyling`, `xy`, `tikz-qtree o forest`), etc. Dada esta breve presentación de paquetes, cabría que considerar si el aprendizaje y el uso de estos forma parte de nuestra formación profesional como lingüístas. ¡Yo pienso que sí! Incluso el aprendizaje de cosas nuevas siempre puede resultarnos satisfactorio.
+En el caso de la lingüística, resulta muy útil porque existen un conjunto de paquetes que nos permiten escribir símbolos fonéticos (con `tipa`), glosas (con `gb4e` o `covington`), enumeración de ejemplos (con `gb4e`,  `ling-macros`, `linguex` o `philex` ), estructuras de representación del discurso (con `drs`), árboles de dependencia (con `TikZ-dependency`) y árboles sintácticos (con `xyling`, `xy`, `tikz-qtree o forest`), etc. Como podemos ver mucha gente ha dedicado tiempo y esfuerzo para crear estos paquetes lingüísticos, cabría que considerar si el aprendizaje y el uso de estos formaría parte complementaría dentro de nuestra formación profesional como lingüístas. ¡Yo pienso que sí! Incluso el aprendizaje de cosas nuevas siempre puede resultarnos satisfactorio.
 
 En fin, a lo largo de este *post*, me enfocaré en explicar algunas maneras en las que podemos dibujar árboles sintácticos con `forest` porque pienso que es un paquete bastante intuitivo para la elaboración de representaciones árboreas. Además, para lograr este objetivo, consideraré que el lector ya cuenta con algunos conocimientos básicos en el uso LaTeX; si este no es el caso existen muy buenos manuales en internet. 
 
-Añado un curso que posiblemente pueda interesar:
+Añado un curso en GitHub (no es el único) que posiblemente pueda interesar:
 
 [Introducción a LaTeX](https://github.com/piratax007/LaTeX_Course)
 
@@ -96,7 +96,7 @@ Daremos un paso más allá y trataremos de dibujar el esquema de X-barra. Lo pri
 \end{document}
 ```
 
-Puede resultar un poco confuso este segmento de código, pero, con el fin de enumerar nuestro esquema, solamente  hemos añadido un ambiente del paquete `philex`. Expliquemos un poco este ámbiente *lb{}{}*: dentro de las primera llaves **{}** escribimos un identificador de nuestro ejemplo, para usarlo más tarde en alguna referencias cruzadas a lo largo del escrito de nuestro texto y tener control de ellos; yo he utilizado *ejemploxbar1*, pero puede llevar cualquier otro que deseen. En las segundas llaves, hemos anidado el ambiente de `forest`. 
+Puede resultar un poco confuso este segmento de código, pero, con el fin de enumerar nuestro esquema, solamente  hemos añadido un ambiente del paquete `philex`. Expliquemos un poco este ámbiente `lb{}{}`: dentro de las primera llaves `{}` escribimos un identificador de nuestro ejemplo, para usarlo más tarde en alguna referencias cruzadas a lo largo del escrito de nuestro texto y tener control de ellos; yo he utilizado `ejemploxbar1`, pero puede llevar cualquier otro que deseen. En las segundas llaves, hemos anidado el ambiente de `forest`. 
 
 En cuanto al encorchetado dentro de este ámbiente, observamos que el corchete principal, el más externo **SX**, contiene otros dos: **SX** y **X'**. Después de compilarlo, obtenemos el siguiente resultado:
 
