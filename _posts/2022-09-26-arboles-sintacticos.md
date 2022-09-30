@@ -149,7 +149,7 @@ La utilidad de las proyecciones intermedias es que nos permiten justificar la po
     }
    
 ```
-![Quinto ejemplo](/images/post_1/ejemplo5.png)
+![Sexto ejemplo](/images/post_1/ejemplo6.png)
 
 
 Podemos reperitir el mismo proceso para producir otro nivel. En la siguiente línea se muestra un ejemplo:
@@ -166,7 +166,7 @@ Podemos reperitir el mismo proceso para producir otro nivel. En la siguiente lí
         ]
     \end{forest}
 ```
-![Sexto ejemplo](/images/post_1/ejemplo6.png)
+![Séptimo ejemplo](/images/post_1/ejemplo7.png)
 
 
 ## Movimiento sintáctico
