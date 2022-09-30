@@ -7,11 +7,11 @@ title: Árboles sintácticos
 
 ## 1. Intro
 
-LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamiento de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de escritos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica en generar, p. ej., diagramas de diferente clase (diagramas de flujo, grafos, árboles de decisión, automátas, etc) a través de gráficos vectoriales (**PGF/TikZ**) y complejas fórmulas matemáticas gracias su **modo matemático**. ¡LaTeX es una herramienta versátil!, ya que cuenta con una sinfinidad de paquetes que siempre se ajustan a nuestras necesidades.
+LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamiento de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de escritos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica en generar, p. ej., diagramas de diferente clase (diagramas de flujo, grafos, árboles de decisión, automátas, etc) a través de gráficos vectoriales (`PGF/TikZ`) y complejas fórmulas matemáticas gracias su **modo matemático**. ¡LaTeX es una herramienta versátil!, ya que cuenta con una sinfinidad de paquetes que siempre se ajustan a nuestras necesidades.
 
-En el caso de la lingüística, resulta muy útil porque existen un conjunto de paquetes que nos permiten escribir símbolos fonéticos (con **tipa**), glosas (con **gb4e** o **covington**), enumeración de ejemplos (con **gb4e,  ling-macros, linguex o philex** ), estructuras de representación del discurso (con **drs**), árboles de dependencia (con **TikZ-dependency**) y árboles sintácticos (con **xyling, xy, tikz-qtree o forest**), etc. Dada esta breve presentación de paquetes, cabría que considerar si el aprendizaje y el uso de estos forma parte de nuestra formación profesional como lingüístas. ¡Yo pienso que sí! Incluso el aprendizaje de cosas nuevas siempre puede resultarnos satisfactorio.
+En el caso de la lingüística, resulta muy útil porque existen un conjunto de paquetes que nos permiten escribir símbolos fonéticos (con **tipa**), glosas (con `gb4e` o `covington`), enumeración de ejemplos (con `gb4e`,  `ling-macros`, `linguex o philex` ), estructuras de representación del discurso (con `drs`), árboles de dependencia (con `TikZ-dependency`) y árboles sintácticos (con `xyling`, `xy`, `tikz-qtree o forest`), etc. Dada esta breve presentación de paquetes, cabría que considerar si el aprendizaje y el uso de estos forma parte de nuestra formación profesional como lingüístas. ¡Yo pienso que sí! Incluso el aprendizaje de cosas nuevas siempre puede resultarnos satisfactorio.
 
-En fin, a lo largo de este *post*, me enfocaré en explicar algunas maneras en las que podemos dibujar árboles sintácticos con **forest** porque pienso que es un paquete bastante intuitivo para la elaboración de representaciones árboreas. Además, para lograr este objetivo, consideraré que el lector ya cuenta con algunos conocimientos básicos en el uso LaTeX; si este no es el caso existen muy buenos manuales en internet. 
+En fin, a lo largo de este *post*, me enfocaré en explicar algunas maneras en las que podemos dibujar árboles sintácticos con `forest` porque pienso que es un paquete bastante intuitivo para la elaboración de representaciones árboreas. Además, para lograr este objetivo, consideraré que el lector ya cuenta con algunos conocimientos básicos en el uso LaTeX; si este no es el caso existen muy buenos manuales en internet. 
 
 Añado un curso que posiblemente pueda interesar:
 
@@ -29,7 +29,7 @@ Para comenzar, tendremos que cargar el paquete de forest en el preámbulo de nue
 
 ```
 
-Una cuestión importante que debemos tomar en cuenta para el futuro es que al momento de hacer las flechas de los movimientos sintácticos que conectan los nodos,  **forest** produce un conflicto con algunos caracteres del paquete **babel** en español. Para evitar este problema, tenemos que escribir lo siguiente: 
+Una cuestión importante que debemos tomar en cuenta para el futuro es que al momento de hacer las flechas de los movimientos sintácticos que conectan los nodos,  `forest` produce un conflicto con algunos caracteres del paquete `babel` en español. Para evitar este problema, tenemos que escribir lo siguiente: 
 
 
 ```{=latex}
@@ -38,7 +38,7 @@ Una cuestión importante que debemos tomar en cuenta para el futuro es que al mo
 
 ```
 
-Esto nos mantendrá prevenidos para futuros errores que puedan resultarnos frustantes. Muy bien, ahora, dentro del cuerpo de nuestro documento, llamaremos al ambiente de **forest**. En este punto, veremos que la sintaxis básica de este paquete consiste en usar corchetes para anidar otros corchetes. ¡Así de fácil! Como observamos en el siguiente ejemplo, el corchete más grande tiene en su inicio un **1**, que corresponde a la posición del nodo madre, y anida otros dos corchetes con sus respectivos números: **2** y **3**, que son los nodos hermanos. 
+Esto nos mantendrá prevenidos para futuros errores que puedan resultarnos frustantes. Muy bien, ahora, dentro del cuerpo de nuestro documento, llamaremos al ambiente de `forest`. En este punto, veremos que la sintaxis básica de este paquete consiste en usar corchetes para anidar otros corchetes. ¡Así de fácil! Como observamos en el siguiente ejemplo, el corchete más grande tiene en su inicio un **1**, que corresponde a la posición del nodo madre, y anida otros dos corchetes con sus respectivos números: **2** y **3**, que son los nodos hermanos. 
 
 
 ```{=latex}
@@ -96,7 +96,7 @@ Daremos un paso más allá y trataremos de dibujar el esquema de X-barra. Lo pri
 \end{document}
 ```
 
-Puede resultar un poco confuso este segmento de código, pero, con el fin de enumerar nuestro esquema, solamente  hemos añadido un ambiente del paquete **philex**. Expliquemos un poco este ámbiente *lb{}{}*: dentro de las primera llaves **{}** escribimos un identificador de nuestro ejemplo, para usarlo más tarde en alguna referencias cruzadas a lo largo del escrito de nuestro texto y tener control de ellos; yo he utilizado *ejemploxbar1*, pero puede llevar cualquier otro que deseen. En las segundas llaves, hemos anidado el ambiente de **forest**. 
+Puede resultar un poco confuso este segmento de código, pero, con el fin de enumerar nuestro esquema, solamente  hemos añadido un ambiente del paquete `philex`. Expliquemos un poco este ámbiente *lb{}{}*: dentro de las primera llaves **{}** escribimos un identificador de nuestro ejemplo, para usarlo más tarde en alguna referencias cruzadas a lo largo del escrito de nuestro texto y tener control de ellos; yo he utilizado *ejemploxbar1*, pero puede llevar cualquier otro que deseen. En las segundas llaves, hemos anidado el ambiente de `forest`. 
 
 En cuanto al encorchetado dentro de este ámbiente, observamos que el corchete principal, el más externo **SX**, contiene otros dos: **SX** y **X'**. Después de compilarlo, obtenemos el siguiente resultado:
 
@@ -117,7 +117,7 @@ Como podemos observar, nuestro esquema de X-barra sigue incompleto falta añadir
 
 ![Quinto ejemplo](/images/post_1/ejemplo5.png)
 
-Antes de terminar este apartado, me gustaría señalar que algunas veces tenemos que dibujar diagramas mucho más complejos, por lo que va a llegar un momento en el que resultará complicado manejar todo el encorchetado. Para evitar esto, eso se recomiendo separar en cada linea por niveles los segmentos más importantes de nuestro árbol con sangrías y alinear el corchete de cierre al final con el de apertura. Todo esto no modificará el resultado, pero nos ayudará prevenir muchos posibles desas
+Antes de terminar este apartado, me gustaría señalar que algunas veces tenemos que dibujar diagramas mucho más complejos, por lo que va a llegar un momento en el que resultará complicado manejar todo el encorchetado. Para evitar esto, eso se recomiendo separar en cada linea por niveles los segmentos más importantes de nuestro árbol con sangrías y alinear el corchete de cierre al final con el de apertura. Todo esto no modificará el resultado, pero nos ayudará prevenir muchos posibles errores.
 
 
 ```{=latex}
@@ -134,14 +134,15 @@ Antes de terminar este apartado, me gustaría señalar que algunas veces tenemos
 
 ## 1.2. Proyecciones intermedias
 
-La utilidad de las proyecciones intermedias es que nos permiten justificar la posición de los adjuntos que ocurren en una construcción sintáctica, además de que son recursivas, es decir, pueden proyectarse más de una vez dentro de nuestra estructura arborea. En el caso de la nuestra, no tomamos en cuenta esta proyección, pero ya es hora. Lo que tenemos que hacer es anidar en nuestra proyección intermedia otra proyección con la misma etiqueta más la posición de adjunto. Esta nueva proyección intermedia albergará otro que su vez incluirá el núcleo y la posición de sujeto.     
+La utilidad de las proyecciones intermedias es que nos permiten justificar la posición de los adjuntos que ocurren en una construcción sintáctica, además de que son recursivas, es decir, pueden proyectarse más de una vez dentro de la estructura arborea. En el caso de la nuestra, no tomamos en cuenta esta proyección, pero ya es hora. Lo que tenemos que hacer es anidar en nuestra proyección intermedia otra proyección con la misma etiqueta más la posición de adjunto. Esta nueva proyección intermedia albergará otro que su vez incluirá el núcleo y la posición de sujeto.     
 
 ```{=latex}
 
 \lb{ejemploxbar2}{
     \begin{forest}
     [SX [SY] 
-        [X' [X' [X$^0$] [SZ]] [SW] 
+        [X' 
+            [X' [X$^0$] [SZ]] [SW] 
         ]     
     ]
     \end{forest}
@@ -151,43 +152,22 @@ La utilidad de las proyecciones intermedias es que nos permiten justificar la po
 ![Quinto ejemplo](/images/post_1/ejemplo5.png)
 
 
-Como
+Podemos reperitir el mismo proceso para producir otro nivel. En la siguiente línea se muestra un ejemplo:
     
 ```{=latex}
-
-\usepackage[spanish]{babel}
-\usepackage[linguistics]{forest}
-\usepackage{philex}
-
-\begin{document}
-\lb{1}{
-    \lba{1a}{SX $\rightarrow$  SY, X'}
-    \lbb{1b}{X' $\rightarrow$ X$^0$, SZ}
-    \lbz{1c}{ Esquema de la X': \\   
-    \begin{forest}
-    [SX [SY \\ (Especificador) ] 
-        [X' [X$^0$ \\ (Núcleo)] 
-            [SZ \\ (Complemento) ]]]
-    \end{forest}}}
-
-
-    \begin{forest}
-    [SX [especificador]
-        [X' 
-            [X' [X$^0$] [complemento]
-            ] [adjunto]]]
-    \end{forest}
-        
-Página 141 de Fundamentos de Sintaxis Formal.
-
-    \begin{forest}
+\begin{forest}
         [SX [especificador]
             [X'
                 [X'  
                     [X' [X$^0$] [Complemento]] 
                     [Segundo Complemento]] 
-                        [Adjunto]]]
+                        [Adjunto]
+            ]
+        ]
     \end{forest}
 ```
-    
+
+## Moviento sintáctico
+
+Nota: Esta sección está en construcción
 
