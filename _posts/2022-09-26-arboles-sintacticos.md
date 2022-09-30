@@ -18,7 +18,7 @@ Añado un curso en GitHub (no es el único) que posiblemente pueda interesar:
 [Introducción a LaTeX](https://github.com/piratax007/LaTeX_Course)
 
 
-### Creando nuestras primeras representaciones con forest
+### 1.1. Creando nuestras primeras representaciones con forest
 
 Para comenzar, tendremos que cargar el paquete de forest en el preámbulo de nuestro documento:
 
@@ -77,7 +77,7 @@ Si hemos comprendido esto, ya estamos a la mitad del camino para construir diagr
 ![Tercer ejemplo](/images/post_1/ejemplo3.png)
 
 
-### 1.1. Creando el esquema X-barra
+### 1.2. Creando el esquema X-barra
 
 Daremos un paso más allá y trataremos de dibujar el esquema de X-barra. Lo primero que debemos de saber es que temos una proyección máxima **SX**, que domina dos nodos: **SY** y **X'**. Hay que recordar que el primero es la posición del especificador y el segundo, de la proyección intermedia. Además, tenemos una proyección intermedia **X'**  que domina dos nodos: el núcleo sobre el cuál se proyecta toda la estructura **X<sup>0</sup>** y el complemento **SZ**. De todo esto, primero, podemos empeñarnos en construir la parte de arriba:
 
