@@ -166,8 +166,10 @@ Podemos reperitir el mismo proceso para producir otro nivel. En la siguiente lí
         ]
     \end{forest}
 ```
+![Sexto ejemplo](/images/post_1/ejemplo6.png)
 
-## Moviento sintáctico
 
-Nota: Esta sección está en construcción
+## Movimiento sintáctico
+
+**Nota**: Esta sección está en construcción :D
 
