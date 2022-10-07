@@ -54,7 +54,9 @@ Esto nos mantendrá prevenidos para futuros errores que puedan resultarnos frust
 
 Compilamos y  produce:
 
-![Primer ejemplo](/images/post_1/ejemplo1.png)
+<img src = "/images/post_1/ejemplo1.png" width = "500" height = "300" alt = "Primer ejemplo">
+
+<!--- ![Primer ejemplo](/images/post_1/ejemplo1.png) -->
 
 Si hemos comprendido esto, ya estamos a la mitad del camino para construir diagramas mucho más complejos, pero antes repitamos este mismo proceso y hagamos otras combinaciones para practicar.
 
@@ -65,7 +67,10 @@ Si hemos comprendido esto, ya estamos a la mitad del camino para construir diagr
 \end{forest}
 
 ```
-![Segundo ejemplo](/images/post_1/ejemplo2.png)
+<img src = "/images/post_1/ejemplo2.png" width = "500" height = "300" alt = "Segundo ejemplo">
+
+
+<!--- ![Segundo ejemplo](/images/post_1/ejemplo2.png) -->
 
 ```{=latex}
 
@@ -74,7 +79,11 @@ Si hemos comprendido esto, ya estamos a la mitad del camino para construir diagr
 \end{forest}
 
 ```
-![Tercer ejemplo](/images/post_1/ejemplo3.png)
+
+
+<img src = "/images/post_1/ejemplo3.png" width = "500" height = "300" alt = "Tercer ejemplo">
+
+<!--- ![Tercer ejemplo](/images/post_1/ejemplo3.png) -->
 
 
 ### 1.2. Creando el esquema X-barra
@@ -100,7 +109,10 @@ Puede resultar un poco confuso este segmento de código, pero, con el fin de enu
 
 En cuanto al encorchetado dentro de este ámbiente, observamos que el corchete principal, el más externo **SX**, contiene otros dos: **SX** y **X'**. Después de compilarlo, obtenemos el siguiente resultado:
 
-![Cuarto ejemplo](/images/post_1/ejemplo4.png)
+
+<img src = "/images/post_1/ejemplo4.png" width = "500" height = "300" alt = "Cuarto ejemplo">
+
+<!---![Cuarto ejemplo](/images/post_1/ejemplo4.png) -->
 
 
 Como podemos observar, nuestro esquema de X-barra sigue incompleto falta añadir el nivel de abajo. Por lo tanto, lo único que tenemos que hacer es anidar dentro de la proyección intermedia dos corchetes más para obtener nuestro primer esquema X-barra.  
@@ -115,7 +127,10 @@ Como podemos observar, nuestro esquema de X-barra sigue incompleto falta añadir
 
 ```
 
-![Quinto ejemplo](/images/post_1/ejemplo5.png)
+<img src = "/images/post_1/ejemplo5.png" width = "500" height = "300" alt = "Quinto ejemplo">
+
+
+<!--- ![Quinto ejemplo](/images/post_1/ejemplo5.png) -->
 
 Antes de terminar este apartado, me gustaría señalar que algunas veces tenemos que dibujar diagramas mucho más complejos, por lo que va a llegar un momento en el que resultará complicado manejar todo el encorchetado. Para evitar esto, eso se recomiendo separar en cada linea por niveles los segmentos más importantes de nuestro árbol con sangrías y alinear el corchete de cierre al final con el de apertura. Todo esto no modificará el resultado, pero nos ayudará prevenir muchos posibles errores.
 
@@ -149,7 +164,10 @@ La utilidad de las proyecciones intermedias es que nos permiten justificar la po
     }
    
 ```
-![Sexto ejemplo](/images/post_1/ejemplo6.png)
+
+<img src = "/images/post_1/ejemplo6.png" width = "500" height = "300" alt = "Sexto ejemplo">
+
+<!--- ![Sexto ejemplo](/images/post_1/ejemplo6.png) -->
 
 
 Podemos reperitir el mismo proceso para producir otro nivel. En la siguiente línea se muestra un ejemplo:
@@ -166,7 +184,10 @@ Podemos reperitir el mismo proceso para producir otro nivel. En la siguiente lí
         ]
     \end{forest}
 ```
-![Séptimo ejemplo](/images/post_1/ejemplo7.png)
+
+<img src = "/images/post_1/ejemplo7.png" width = "500" height = "300" alt = "Séptimo ejemplo">
+
+<!--- ![Séptimo ejemplo](/images/post_1/ejemplo7.png)  -->
 
 
 ## Movimiento sintáctico
