@@ -20,7 +20,7 @@ Añado un curso en GitHub (no es el único) que posiblemente pueda interesar:
 
 ### 1.1. Creando nuestras primeras representaciones con forest
 
-Para comenzar, tendremos que cargar el paquete de forest en el preámbulo de nuestro documento:
+Para comenzar, tendremos que cargar el paquete de `forest` en el preámbulo de nuestro documento:
 
 
 ```{=latex}
@@ -38,7 +38,7 @@ Una cuestión importante que debemos tomar en cuenta para el futuro es que al mo
 
 ```
 
-Esto nos mantendrá prevenidos para futuros errores que puedan resultarnos frustantes. Muy bien, ahora, dentro del cuerpo de nuestro documento, llamaremos al ambiente de `forest`. En este punto, veremos que la sintaxis básica de este paquete consiste en usar corchetes para anidar otros corchetes. ¡Así de fácil! Como observamos en el siguiente ejemplo, el corchete más grande tiene en su inicio un **1**, que corresponde a la posición del nodo madre, y anida otros dos corchetes con sus respectivos números: **2** y **3**, que son los nodos hermanos. 
+Esto nos mantendrá prevenidos de futuros errores que puedan resultarnos frustantes. Muy bien, ahora, dentro del cuerpo de nuestro documento, llamaremos al ambiente de `forest`. En este punto, veremos que la sintaxis básica de este paquete consiste en usar corchetes para anidar otros corchetes. ¡Así de fácil! Como observamos en el siguiente ejemplo, el corchete más grande tiene en su inicio un **1**, que corresponde a la posición del nodo madre, y anida otros dos corchetes con sus respectivos números: **2** y **3**, que son los nodos hermanos. 
 
 
 ```{=latex}
@@ -170,7 +170,7 @@ La utilidad de las proyecciones intermedias es que nos permiten justificar la po
 <!--- ![Sexto ejemplo](/images/post_1/ejemplo6.png) -->
 
 
-Podemos reperitir el mismo proceso para producir otro nivel. En la siguiente línea se muestra un ejemplo:
+Podemos repetir el mismo proceso para producir otro nivel. En la siguiente línea se muestra un ejemplo:
     
 ```{=latex}
 \begin{forest}
