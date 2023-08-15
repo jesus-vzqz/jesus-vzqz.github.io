@@ -7,11 +7,13 @@ title: Árboles sintácticos
 
 ## 1. Intro
 
-LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamiento de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de escritos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica en generar, p. ej., diagramas de flujo, grafos, árboles de decisión, automátas, etc. a través de gráficos vectoriales (`PGF/TikZ`) y complejas fórmulas matemáticas gracias a su **modo matemático**. ¡LaTeX es una herramienta versátil!, ya que cuenta con una sinfinidad de paquetes que siempre se ajustan a nuestras necesidades.
+LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamiento de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de escritos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica en generar, p. ej., diagramas de flujo, grafos, árboles de decisión, automátas, etc. a través de gráficos vectoriales (`PGF/TikZ`) y complejas fórmulas matemáticas gracias a su **modo matemático**. 
 
-En el caso de la lingüística, resulta muy útil porque existen un conjunto de paquetes que nos permiten escribir símbolos fonéticos (con `tipa`), glosas (con `gb4e` o `covington`), enumeración de ejemplos (con `gb4e`,  `ling-macros`, `linguex` o `philex` ), estructuras de representación del discurso (con `drs`), árboles de dependencia (con `TikZ-dependency`) y árboles sintácticos (con `xyling`, `xy`, `tikz-qtree` o `forest`), etc. Como podemos ver mucha gente ha dedicado tiempo y esfuerzo para crear estos paquetes lingüísticos, cabría que considerar si el aprendizaje y el uso de estos formaría parte complementaría dentro de nuestra formación profesional como lingüístas. ¡Yo pienso que sí! Incluso el aprendizaje de cosas nuevas siempre puede resultarnos satisfactorio.
+¡LaTeX es una herramienta versátil!, ya que cuenta con una sinfinidad de paquetes que siempre se ajustan a nuestras necesidades.
 
-En fin, a lo largo de este *post*, me enfocaré en explicar algunas maneras en las que podemos dibujar árboles sintácticos con `forest` porque pienso que es un paquete bastante intuitivo para la elaboración de representaciones árboreas. Además, para lograr este objetivo, consideraré que el lector ya cuenta con algunos conocimientos básicos en el uso LaTeX; si este no es el caso existen muy buenos manuales en internet. 
+En el caso de la lingüística, resulta muy útil porque existen un conjunto de paquetes que nos permiten escribir símbolos fonéticos (con `tipa`), glosas (con `gb4e` o `covington`), enumeración de ejemplos (con `gb4e`,  `ling-macros`, `linguex` o `philex` ), estructuras de representación del discurso (con `drs`), árboles de dependencia (con `TikZ-dependency`) y árboles sintácticos de constituyentes (con `xyling`, `xy`, `tikz-qtree` o `forest`), etc. Como podemos observar mucha gente ha dedicado tiempo y esfuerzo para crear estos paquetes lingüísticos, cabría que considerar si el aprendizaje y el uso de estos formaría parte complementaría dentro de nuestra formación profesional como lingüístas. ¡Yo pienso que sí! Incluso el aprendizaje de cosas nuevas siempre puede resultarnos satisfactorio.
+
+A lo largo de este *post*, nos enfocaremos en explicar algunas maneras en las que podemos dibujar árboles sintácticos con `forest` porque pensamos que es un paquete bastante intuitivo para la elaboración de representaciones árboreas. Además, para lograr este objetivo, consideraremos que el lector ya cuenta con algunos conocimientos básicos en el uso LaTeX; si este no es el caso existen muy buenos manuales en internet. 
 
 Añado un curso en GitHub (no es el único) que posiblemente pueda interesar:
 
@@ -192,5 +194,8 @@ Podemos repetir el mismo proceso para producir otro nivel. En la siguiente líne
 
 ## Movimiento sintáctico
 
-**Nota**: Esta sección está en construcción :D
+
+<img src = "/images/post_1/ejemplo8.png" width = "500" height = "300" alt = "Octavo ejemplo">
+
+<!--- ![Octavo ejemplo](/images/post_1/ejemplo8.png)  -->
 
