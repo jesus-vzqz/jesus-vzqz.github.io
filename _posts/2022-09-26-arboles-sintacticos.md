@@ -216,7 +216,12 @@ Para construir el árbol anterior, debemos de seguir los pasos previamente prese
 \end{forest}}}
 ```
 
-En este caso, podemos observar cómo en el nodo correspondiente (`[v'[tosió, name = 2]`) hemos indicado después de la coma `,` un parametro   
+En este caso, observamos cómo en el nodo correspondiente a `[v'[tosió, name = 2]` hemos indicado después de la coma `,` un parametro `name =2` en el que indicamos la etiqueta de dicho nodo, llamándolo `2` (podría escribirse cualquier otro nombrae, p. ej., `núcleo2` o `posición2`). Dentro del mismo ambiente de `forest`, notamos cómo en el nodo de `[SV [\sout{tosió}, name = 1][X]]]` hemos etiquetado o nombrado con `1`. Estas dos etiquetas son importantes porque nos van a ayudar a dirigir la dirección de nuestras flechas. 
 
+Despúes de terminar el encorchetado de nuestro árbol sintáctico, podemos comenzar a dibujar las flechas que indican el movimiento sintáctico, para eso hacemos uso del comentao de `tikz` `\draw[]`. Con este comando podemos especificar la dirección de la punta que queremos dibujar -- p. ej.,`\draw[->]`, `\draw[<-]`, `\draw[<->]`-- hasta el punto de inicio y final de la flecha `(1) to[out=south,in=south] (2)`
+
+```{=latex}
+\draw[->] (1) to[out=south,in=south] (2);
+```
 
 
