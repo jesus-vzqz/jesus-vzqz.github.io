@@ -5,7 +5,7 @@ title: Árboles sintácticos
 
 
 
-## 1. Intro
+# 1. Intro
 
 LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamiento de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de escritos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica en generar, p. ej., diagramas de flujo, grafos, árboles de decisión, automátas, etc. a través de gráficos vectoriales (`PGF/TikZ`) y complejas fórmulas matemáticas gracias a su **modo matemático**. 
 
@@ -20,7 +20,7 @@ Añado un curso en GitHub (no es el único) que posiblemente pueda interesar:
 [Introducción a LaTeX](https://github.com/piratax007/LaTeX_Course)
 
 
-### 1.1. Creando nuestras primeras representaciones con forest
+## 1.1. Creando nuestras primeras representaciones con forest
 
 Para comenzar, tendremos que cargar el paquete de `forest` en el preámbulo de nuestro documento:
 
@@ -88,7 +88,7 @@ Si hemos comprendido esto, ya estamos a la mitad del camino para construir diagr
 <!--- ![Tercer ejemplo](/images/post_1/ejemplo3.png) -->
 
 
-### 1.2. Creando el esquema X-barra
+## 1.2. Creando el esquema X-barra
 
 Daremos un paso más allá y trataremos de dibujar el esquema de X-barra. Lo primero que debemos de saber es que temos una proyección máxima **SX**, que domina dos nodos: **SY** y **X'**. Hay que recordar que el primero es la posición del especificador y el segundo, de la proyección intermedia. Además, tenemos una proyección intermedia **X'**  que domina dos nodos: el núcleo sobre el cuál se proyecta toda la estructura **X<sup>0</sup>** y el complemento **SZ**. De todo esto, primero, podemos empeñarnos en construir la parte de arriba:
 
@@ -149,7 +149,7 @@ Antes de terminar este apartado, me gustaría señalar que algunas veces tenemos
 
 ```
 
-## 1.2. Proyecciones intermedias
+## 1.3. Proyecciones intermedias
 
 La utilidad de las proyecciones intermedias es que nos permiten justificar la posición de los adjuntos que ocurren en una construcción sintáctica, además de que son recursivas, es decir, pueden proyectarse más de una vez dentro de la estructura arborea. En el caso de la nuestra, no tomamos en cuenta esta proyección, pero ya es hora. Lo que tenemos que hacer es anidar en nuestra proyección intermedia otra proyección con la misma etiqueta más la posición de adjunto. Esta nueva proyección intermedia albergará otro que su vez incluirá el núcleo y la posición de sujeto.     
 
@@ -192,7 +192,9 @@ Podemos repetir el mismo proceso para producir otro nivel. En la siguiente líne
 <!--- ![Séptimo ejemplo](/images/post_1/ejemplo7.png)  -->
 
 
-## Movimiento sintáctico
+## 1.4. Movimiento sintáctico
+
+Ya hemos visto algunos principios básicos para crear árboles sintácticos. Comenzaremos a ver cómo dibujar flechas entre los nodos, lo que corresponde dentro de la teoría cómo los movimientos sintácticos. Veamos el siguiente ejemplo:  
 
 
 <img src = "/images/post_1/ejemplo8.png" width = "500" height = "300" alt = "Octavo ejemplo">
