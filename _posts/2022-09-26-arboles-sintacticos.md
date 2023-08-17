@@ -196,7 +196,6 @@ Podemos repetir el mismo proceso para producir otro nivel. En la siguiente líne
 
 Ya hemos visto algunos principios básicos para crear árboles sintácticos. Comenzaremos a ver cómo dibujar flechas entre los nodos, lo que corresponde dentro de la teoría cómo los movimientos sintácticos. Veamos el siguiente ejemplo:  
 
-
 <img src = "/images/post_1/ejemplo8.png" width = "500" height = "300" alt = "Octavo ejemplo">
 
 <!--- ![Octavo ejemplo](/images/post_1/ejemplo8.png)  -->
