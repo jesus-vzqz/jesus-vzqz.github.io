@@ -194,9 +194,29 @@ Podemos repetir el mismo proceso para producir otro nivel. En la siguiente líne
 
 ## 1.4. Movimiento sintáctico
 
-Ya hemos visto algunos principios básicos para crear árboles sintácticos. Comenzaremos a ver cómo dibujar flechas entre los nodos, lo que corresponde dentro de la teoría cómo los movimientos sintácticos. Veamos el siguiente ejemplo:  
+Ya hemos visto algunos principios básicos para crear árboles sintácticos. Ahora, comenzaremos la manera de dibujar flechas entre los nodos, lo que corresponde dentro de la teoría cómo los movimientos sintácticos. Veamos el siguiente ejemplo tomado de Camacho (2018):  
 
 <img src = "/images/post_1/ejemplo8.png" width = "500" height = "300" alt = "Octavo ejemplo">
 
 <!--- ![Octavo ejemplo](/images/post_1/ejemplo8.png)  -->
+
+Para construir el árbol anterior, debemos de seguir los pasos previamente presentados. Un código cercano para dibujar el árbol anterior puede ser escrito de la siguiente manera:
+
+```{=latex}
+\lb{x}{
+\textbf{Construcción inergativa:}\\
+    \lba{x1}{El paciente tosió}
+    \lbb{x2}{
+\begin{forest}
+    [ST [T] 
+        [Sv [SD[el][SN[paciente]]]
+            [v'[tosió, name = 2]
+                [SV [\sout{tosió}, name = 1][X]]]]]
+\draw[->] (1) to[out=south,in=south] (2);
+\end{forest}}}
+```
+
+En este caso, podemos observar cómo en el nodo correspondiente (`[v'[tosió, name = 2]`) hemos indicado después de la coma `,` un parametro   
+
+
 
