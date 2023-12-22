@@ -379,8 +379,27 @@ López Palma, H. (2016). Semántica. En J. Gutiérrez-Rexach (Ed.), *Enciclopedi
 
 ### Otras fuentes interesantes para aprender
 
--[Documentación de forest](https://ctan.org/pkg/forest?lang=en)
--[Forest Quickstart Guide for Linguists
+**Forest**:
+* [Documentación de forest](https://ctan.org/pkg/forest?lang=en)
+* [Forest Quickstart Guide for Linguists
 ](https://tug.ctan.org/info/forest-quickstart/forest-quickstart.pdf)
+
+**Fonología y LaTeX**: 
+
+* [LaTeX and Phonology
+](https://gdgarcia.ca/latex_phonology.html)
+
+**Otros**:
+* [LaTeX/Linguistics
+](https://en.wikibooks.org/wiki/LaTeX/Linguistics)
+* [Using LaTeX in Linguistics
+](https://www.linguisticsociety.org/content/using-latex-linguistics)
+* [LaTeX for Linguists!
+](https://kutay-serova.github.io/files/LaTeX_for_Linguists_20211123.pdf)
+
+
+
+
+
 
 
