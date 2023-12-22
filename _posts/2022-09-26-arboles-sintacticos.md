@@ -266,6 +266,7 @@ for tree={s sep=2mm, inner sep=0, l=0}
 \end{forest}
 
 ```
+<img src = "/images/post_1/ejemplo9.png" width = "500" height = "300" alt = "Noveno ejemplo">
 <!--- ![Noveno ejemplo](/images/post_1/ejemplo9.png)  -->
 
 En el anterior ejemplo, hemos puesto en práctica todos los elementos expresados a lo largo de este post. Algunos de los detalles que caben destacar se relacionan con la posición del arco de la flecha que atraviesa los caracteres que forman parte de los nodos. En el ejemplo anterior, repetimos el proceso para que cada una de las flechas saliera por los nodos definidos con una dirección de salida (`out = south west`) y una de entrada (`in = south`), sin embargo, esto ha provocado que la calidad de nuestro árbol no sea tan buena. Para eso, necesitamos cambiar el parámetro de la dirección de salida y entrada. 
@@ -314,6 +315,8 @@ Los cambios que se han realizado son los siguientes: `\draw[->] (salida2) to[out
 Si se nos dificulta pensar las medidas, hay que saber que en `Tikz`, las direcciones de las flechas las medimos en grados y pueden ser representadas dentro de un plano cartesiano. Por tanto, `0` y `360`grados corresponden al este (hacia la derecha del plano cartesiano, `90` grados corresponde al norte (la parte de arriba del plano), 180 grados corresponde al oeste (a la izquierda) y `270` grados corresponde al sur (abajo).   
 
 De este modo, en la línea de `\draw[->] (objetivo3) to[out= -110, in= -122] (objetivo4.west);` indicamos que tanto la salida y la llegada sean en el sureste, especificando la llegada en la parte este del nodo. La ventaja de estas modificaciones es que nos permiten manejar la curvatura de las flechas y evitar la superposición de los elementos dentro del árbol. Al final obtenemos el siguiente ejemplo: 
+
+<img src = "/images/post_1/ejemplo10.png" width = "500" height = "300" alt = "Décimo ejemplo">
 
 <!--- ![Décimo ejemplo](/images/post_1/ejemplo10.png)  -->
 
