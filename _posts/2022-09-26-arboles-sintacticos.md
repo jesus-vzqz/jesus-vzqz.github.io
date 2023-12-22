@@ -5,7 +5,7 @@ title: Árboles sintácticos
 
 
 
-# 1. Intro
+# 1. Introducción
 
 LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamiento de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de escritos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica en generar, p. ej., diagramas de flujo, grafos, árboles de decisión, automátas, etc. a través de gráficos vectoriales (`PGF/TikZ`) y complejas fórmulas matemáticas gracias a su **modo matemático**. 
 
