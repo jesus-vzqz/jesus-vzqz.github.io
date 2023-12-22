@@ -4,7 +4,7 @@ title: Ejemplo de glosas
 ---
 
 
-# Ejemplos de glosas
+# 2. Algunos ejemplos de glosad
 
 Los siguientes ejemplos de glosas fueron extraídos Conti (2020)
 
