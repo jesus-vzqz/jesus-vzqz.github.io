@@ -216,12 +216,96 @@ Para construir el árbol anterior, debemos de seguir los pasos previamente prese
 \end{forest}}}
 ```
 
-En este caso, observamos cómo en el nodo correspondiente a `[v'[tosió, name = 2]` hemos indicado después de la coma `,` un parametro `name =2` en el que indicamos la etiqueta de dicho nodo, llamándolo `2` (podría escribirse cualquier otro nombrae, p. ej., `núcleo2` o `posición2`). Dentro del mismo ambiente de `forest`, notamos cómo en el nodo de `[SV [\sout{tosió}, name = 1][X]]]` hemos etiquetado o nombrado con `1`. Estas dos etiquetas son importantes porque nos van a ayudar a dirigir la dirección de nuestras flechas. 
+En este caso, observamos cómo en el nodo correspondiente a `[v'[tosió, name = 2]` hemos indicado después de la coma `,` un parametro `name =2` en el que expresamos la etiqueta de este, llamándolo `2` (podría escribirse cualquier otro nombrae, p. ej., `núcleo2` o `posición2`). Dentro del mismo ambiente de `forest`, notamos cómo en el nodo de `[SV [\sout{tosió}, name = 1][X]]]`  asignamos `1`. Estas dos etiquetas son importantes porque nos van a ayudar a dirigir la dirección de nuestras flechas. 
 
-Despúes de terminar el encorchetado de nuestro árbol sintáctico, podemos comenzar a dibujar las flechas que indican el movimiento sintáctico, para eso hacemos uso del comentao de `tikz` `\draw[]`. Con este comando podemos especificar la dirección de la punta que queremos dibujar -- p. ej.,`\draw[->]`, `\draw[<-]`, `\draw[<->]`-- hasta el punto de inicio y final de la flecha `(1) to[out=south,in=south] (2)`
+Despúes de terminar el encorchetado de nuestro árbol sintáctico, podemos comenzar a dibujar las flechas que indican el movimiento sintáctico, para eso hacemos uso del comandoo de `tikz` `\draw[]`. Con este comando podemos especificar la dirección de la punta que queremos dibujar -- p. ej.,`\draw[->]`, `\draw[<-]`, `\draw[<->]`-- hasta el punto de inicio y final de la flecha `(1) to[out=south,in=south] (2)`, es decir, la cola de la flecha `(1)` se va a dirigir a `(2)`, la salida (`out = south`) será al sur y la llegada de la punta (`in = south`) será al sur. 
 
 ```{=latex}
 \draw[->] (1) to[out=south,in=south] (2);
 ```
+
+## 1.5 Otros ejemplos 
+
+Para ver el poder de en la que podemos desarrollar 
+
+```{=latex}
+\begin{forest}
+for tree={s sep=2mm, inner sep=0, l=0}
+    [{envió$_{v}$+Flex/T} 
+        [{Pablo$_N$ (FD)}]
+        [{envió$_{v}$+Flex/T}
+            [{le+envió$_V$+Flex/T}, name = objetivo4]    
+            [{v$_L$(Fv$_L$)}
+                [{un$_D$}(FD)   
+                    [un$_D$] [diccionario$_N$(FN), name = objetivo1]] 
+                [V$_L$
+                    [\sout{Pablo} (FD)] 
+                    [V$_L$
+                        [{\sout{le+envió}+V$_L$}, name = objetivo3]
+                        [envió$_V$ (FV) 
+                            [{\sout{le+envió$_V$}}, name = objetivo2] 
+                            [Apl(FApl)
+                                [{a-Gabi$_N$(FD)}] 
+                                [Apl
+                                    [{\sout{le-Apl}}, name = salida2]
+                                    [un$_D$ 
+                                        [\sout{un}$_D$] [\sout{diccionario}$_N$, name = salida1]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]    
+        ]
+    ]
+\draw[->] (salida1) to[out=south west,in=south] (objetivo1);
+\draw[->] (salida2) to[out=south west,in=south] (objetivo2);
+\draw[->] (objetivo2) to[out=south west,in=south] (objetivo3);
+\draw[->] (objetivo3) to[out= south west, in= south] (objetivo4);
+\end{forest}
+
+```
+
+```{=latex}
+\begin{forest}
+for tree={s sep=2mm, inner sep=0, l=0}
+    [{envió$_{v}$+Flex/T} 
+        [{Pablo$_N$ (FD)}]
+        [{envió$_{v}$+Flex/T}
+            [{le+envió$_V$+Flex/T}, name = objetivo4]    
+            [{v$_L$(Fv$_L$)}
+                [{un$_D$}(FD)   
+                    [un$_D$] [diccionario$_N$(FN), name = objetivo1]] 
+                [V$_L$
+                    [\sout{Pablo} (FD)] 
+                    [V$_L$
+                        [{\sout{le+envió}+V$_L$}, name = objetivo3]
+                        [envió$_V$ (FV) 
+                            [{\sout{le+envió$_V$}}, name = objetivo2] 
+                            [Apl(FApl)
+                                [{a-Gabi$_N$(FD)}] 
+                                [Apl
+                                    [{\sout{le-Apl}}, name = salida2]
+                                    [un$_D$ 
+                                        [\sout{un}$_D$] [\sout{diccionario}$_N$, name = salida1]
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ]
+            ]    
+        ]
+    ]
+\draw[->] (salida1) to[out=south west,in=south] (objetivo1);
+\draw[->] (salida2) to[out=-110,in=180] (objetivo2.south);
+\draw[->] (objetivo2) to[out=south west,in=south] (objetivo3);
+\draw[->] (objetivo3) to[out= -110, in= -122] (objetivo4.west);
+\end{forest}
+```
+
+
+
 
 
