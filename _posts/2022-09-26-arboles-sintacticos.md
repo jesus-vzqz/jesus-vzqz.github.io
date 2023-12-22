@@ -224,7 +224,7 @@ Despúes de terminar el encorchetado de nuestro árbol sintáctico, podemos come
 \draw[->] (1) to[out=south,in=south] (2);
 ```
 
-## 1.5 Otros ejemplos 
+## 1.5 Aplicación general
 
 Ahora veamos otros ejemplos de código para poder dibujar árboles mucho más versátiles y detallados, tomados de Camacho (2018). 
 
@@ -321,9 +321,66 @@ De este modo, en la línea de `\draw[->] (objetivo3) to[out= -110, in= -122] (ob
 <!--- ![Décimo ejemplo](/images/post_1/ejemplo10.png)  -->
 
 
+## Otro ejemplo
+
+Tómado de López Palma (2016):
+```{=latex}
+\begin{forest}
+    [$\lambda x \lambda y.y$ quiere $x_{\langle e, et \rangle}$
+        [ $\lambda x \in  D_{e}$] [$\lambda y.y$ quiere a \underline{María}$_{\langle e, t \rangle}$ 
+            [$\lambda y \in D_{e}$]  
+            [\underline{Juan} quiere a María$_{t}$
+                [Juan$_{e}$] [quiere a María$x_{\langle e, t \rangle}$
+                    [quiere$x_{\langle e, et \rangle}$] [María$_e$]
+                ]
+            ]
+        ]    
+    ]
+\end{forest}
+
+```
+
+<img src = "/images/post_1/ejemplo11.png" width = "500" height = "300" alt = "Décimo primero">
+
+<!--- ![Décimo ejemplo](/images/post_1/ejemplo11.png)  -->
+
+## Bibliografía
+
+### En formato Bibtex: 
+
+```{=latex}
+
+@book{camacho2018,
+  title={Introducción a la sintaxis del español},
+  author={Camacho, José},
+  publisher={Cambridge University Press},
+  year={2018},
+}
 
 
+@incollection{lopez2016,
+  title={Semántica},
+  author={López Palma, Helena},
+  booktitle={Enciclopedia de Lingüística Hispánica},
+  editor={Gutiérrez-Rexach, Javier},
+  publisher={Routledge},
+  year={2016},
+  pages={284-300},
+  volume = I,
+  doi={10.4324/9781315713441-26}
+}
+```
 
+### En formato APA
 
+Camacho, J. (2018). *Introducción a la sintaxis del español*. Cambridge University Press. 
+
+López Palma, H. (2016). Semántica. En J. Gutiérrez-Rexach (Ed.), *Enciclopedia de Lingüística Hispánica, Volumen I* (pp. 284-300). Routledge. https://doi.org/10.4324/9781315713441-26
+
+### Otras fuentes interesantes para aprender
+
+-[Documentación de forest](https://ctan.org/pkg/forest?lang=en)
+-[Forest Quickstart Guide for Linguists
+](https://tug.ctan.org/info/forest-quickstart/forest-quickstart.pdf)
 
 
