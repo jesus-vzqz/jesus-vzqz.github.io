@@ -133,15 +133,15 @@ si $w = a_{1}a_{2} ... a_n$, entonces su imagen espejo (*mirror image or reversa
     
     **Left derivative** de $L$ sobre $V: \partial_{v}^{l}L = \\{v\\} \backslash L = \\{w: wv \in L \\}$
     
-    **Tail** of $L \subseteq V^\*: TAIL(L) = \{w \in V^\*:$  donde existe $v \in V^\*$  tal que $vw \in L \\}$ 
+    **Tail** de $L \subseteq V^{\*}: TAIL(L) = \\{w \in V^\*:$  donde existe $v \in V^\*$  tal que $vw \in L \\}$ 
     
     - Hay que notar que para cada $L: L \subseteq TAIL(L)$
     
-    **Morfismo**: Dados dos alfabetos $V_1, V_2,$  una asignación (*a mapping*) $h: V_{1}^{*} \longrightarrow V_{2}^{*}$ es un morfismo si y solo si: 
+    **Morfismo**: Dados dos alfabetos $V_1, V_2,$  una asignación (*a mapping*) $h: V_{1}^{\*} \longrightarrow V_{2}^{\*}$ es un morfismo si y solo si: 
     
-    [(i)] para cada $w \in V_1^{*}$, donde existe $v \in V_2^{*}$, tal que $v = h(w)$  and $v$  es único
+    - (1) para cada $w \in V_1^{\*}$, donde existe $v \in V_2^{\*}$, tal que $v = h(w)  \land v$  es único
     
-    [(ii)] para cada $w, u \in V_1^{*}: h(wu) = h(w)h(u)$
+    - (2) para cada $w, u \in V_1^{*}: h(wu) = h(w)h(u)$
     
     - A morphism is called $\lambda$-free if, for every $w \in V_{1}^{*}$, if $w \neq \lambda$  then $h(w) \neq \lambda$
     
