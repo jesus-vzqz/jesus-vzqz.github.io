@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resumen de Gramáticas y lenguajes formales
+title: Gramáticas y lenguajes formales
 usemathjax: true
 ---
 
 
  Gramáticas formales y lenguajes formales
 
-Leonor Becerra-Bonache, Gemma Bel-Enguix, M. Dolores Jiménez-López, Carlos Martín-Vide
+de Leonor Becerra-Bonache, Gemma Bel-Enguix, M. Dolores Jiménez-López, Carlos Martín-Vide
 
 ---
 
