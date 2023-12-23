@@ -58,14 +58,14 @@ Ejemplo:
 
  $|wv| = |w| + |v|$
 
-*w =* es una **subcadena** (*substring*) o **subpalabra** (*subword*) de *v* si y solo si existe $u_1,u_2$ tal que *v = $u_1wu_2$*
+$w =$ es una **subcadena** (*substring*) o **subpalabra** (*subword*) de *v* si y solo si existe $u_1,u_2$ tal que $v = u_1wu_2$
 
 - Algunos casos especiales de subcadena:
-    - Si $w \neq \lambda$  y $w \neq v$, entonces *w* es una subcadena propia de *v*,
-    - si $u_1 = \lambda$, entonces *w* es un prefijo (**prefix**) o un cabeza (**head**).
-    - si $u_2 = \lambda$, entonces *w* es un sufijo (**suffix**) o un cola (**tail**).
+    - Si $w \neq \lambda$  y $w \neq v$, entonces $w$ es una subcadena propia de $v$,
+    - si $u_1 = \lambda$, entonces $w$ es un prefijo (**prefix**) o un cabeza (**head**).
+    - si $u_2 = \lambda$, entonces $w$ es un sufijo (**suffix**) o un cola (**tail**).
 
-La **concatenación iterada** (*iterated concatenation*) *i*-veces de *w* se muestra de la siguiente manera:
+La **concatenación iterada** (*iterated concatenation*) $i$-veces de $w$ se muestra de la siguiente manera:
 
 si $w = ab$, entonces $w^3 = (ab)^3 = ababab$
 
@@ -74,8 +74,7 @@ $w^0 = \lambda$
 si $w = a_{1}a_{2} ... a_n$, entonces su imagen espejo (*mirror image or reversal*) $w^{-1} = a_{n}a_{n-1} ... a_{1}$
 
 
-💡 Cualquier subconjunto $L \subseteq V^{\*}$   incluyendo tanto a $\empty$ y $\{\lambda\}$ es un **lenguaje**. Uno lo denota $V^{+} = V^{*} -\{\lambda\}$
-
+💡 Cualquier subconjunto $L \subseteq V^{\*}$ incluyendo tanto a $\\emptyset$ y $\\{\lambda\\}$ es un **lenguaje**. Uno lo denota $V^{+} = V^{*} -\\{\lambda\\}$.
 
 
 ---
@@ -85,23 +84,23 @@ si $w = a_{1}a_{2} ... a_n$, entonces su imagen espejo (*mirror image or reversa
 - Dado que los lenguajes son conjuntos, para obtener nuevos lenguajes podemos usar la misma operación que usamos con conjuntos.
 - Operaciones usuales de teoría de conjuntos aplicados en lenguajes:
     
-    **Unión**: $L_{1} \cup L_{2} = \{w: w \in L_{1}$  or $w \in L_{2} \}$
+    **Unión**: $L_{1} \\cup L_{2} = \\{w: w \in L_{1}  \\lor w \in L_{2} \\}$
     
-    **Intersección**: $L_{1} \cap L_{2} = \{w: w \in L_{1}$ and $w \in L_{2}\}$
+    **Intersección**: $L_{1} \\cap L_{2} = \\{w: w \in L_{1} \\land w \in L_{2}\\}$
     
-    **Diferencia**: $L_{1} - L_{2} = \{w: w \in L_{1}$ and $w \notin L_{2} \}$
+    **Diferencia**: $L_{1} - L_{2} = \\{w: w \in L_{1} \\land w \\notin L_{2} \\}$
     
-    **Complemento de $L \subseteq V^{*}$** con respecto de $V^{*} : \bar{L} = V^{*} - L$
+    **Complemento** de $L \\subseteq V^{\*}$ con respecto de $V^{\*} : \\bar{L} = V^{\*} - L$
     
 - Operaciones específicas de la teoría de lenguajes aplicadas en lenguajes:
     
-    **Concatenación**: $L_{1}L_{2} = \{w_{1}w_{2}: w_{1} \in L_{1}$  and $w_{2} \in L_{2}\}$
+    **Concatenación**: $L_{1}L_{2} = \\{w_{1}w_{2}: w_{1} \\in L_{1}  \\land w_{2} \in L_{2} \\}$
     
     **Iteración**: 
     
-    $L^0 = \{\lambda\},$
+    $L^0 = \\{\lambda\\}$,
     
-    $L^1 = L,$
+    $L^1 = L$,
     
     $L^2= LL$, 
     
@@ -109,35 +108,32 @@ si $w = a_{1}a_{2} ... a_n$, entonces su imagen espejo (*mirror image or reversa
     
     **Clausura de iteración: estrella de Kleene** (*closure of the iteration: Kleene star*):
     
-    $$
-    L^* = \bigcup_{i \geq 0}L^i
-    $$
-    
+    $$L^\* = \bigcup_{i \geq 0} L^i$$
+
+
     **Clausura positiva de la iteración: Kleene plus** (*positive closure of the iteration*):
     
-    $$
-    L^+ = \bigcup_{i \geq 1}L^i 
-    $$
+    $$L^+ = \bigcup_{i \geq 1} L^i $$
     
-    - Hay que notar que $L^+$ es igual a $L^*$ si $\lambda \in L$ e igual a $L^* - \{\lambda\}$ si $\lambda \notin L$
+    - Hay que notar que $L^+$ es igual a $L^*$ si $\lambda \in L$ e igual a $L^\* - \\{\lambda\\}$ si $\lambda \notin L$
     
-    **Imagen espejo**: $L^{-1} = \{w: w^{-1} \in L \}$
+    **Imagen espejo**: $L^{-1} = \\{w: w^{-1} \in L \\}$
     
     - Hay que notar que $(L^{-1})^{-1} = L$ y que $(L^{-1})^i = (L^i)^{-1}$ para cada $i \geq 0$
     
-    **Right quotient** (cociente de la derecha) of $L_1$sobre $L_2: L_1/L_2 = \{w:$ donde existe $v \in L_2$  tal que $wv \in L_1 \}$
+    **Right quotient** (cociente de la derecha) de $L_1$ sobre $L_2: L_1/L_2 = \\{w:$ donde existe $v \in L_2$  tal que $wv \in L_1 \\}$
     
-    **Right derivative** of $L$ over $v: \partial_{v}^{r} L = L /\{v\} = \{w: wc \in L \}$
+    **Right derivative** de $L$ sobre $v: \partial_{v}^{r} L = L /\\{v\\} = \\{w: wc \in L \\}$
     
-    **Head of** $L \subseteq V^*: HEAD(L) = \{w \in V^*:$  donde existe $v \in V^*$  tal que $wv \in L\}$
+    **Head of** $L \subseteq V^\*: HEAD(L) = \\{w \in V^\*:$  donde existe $v \in V^\*$  tal que $wv \in L \\}$
     
     - Hay que notar que para cada $L:L \subseteq HEAD(L)$
     
-    **Left quotient** of $L_1$ sobre $L_2\backslash L_1: \{w:$  donde existe  $v \in L_2$  tal que $vw \in L_1 \}$
+    **Left quotient** de $L_1$ sobre $L_2\backslash L_1: \\{w:$  donde existe  $v \in L_2$  tal que $vw \in L_1 \\}$
     
-    **Left derivative** of $L$  sobre $V: \partial_{v}^{l}L = \{v\} \backslash L = \{w: wv \in L \}$
+    **Left derivative** de $L$ sobre $V: \partial_{v}^{l}L = \\{v\\} \backslash L = \\{w: wv \in L \\}$
     
-    **Tail** of $L \subseteq V^*: TAIL(L) = \{w \in V^*:$  donde existe $v \in V^*$  tal que $vw \in L \}$ 
+    **Tail** of $L \subseteq V^\*: TAIL(L) = \{w \in V^\*:$  donde existe $v \in V^\*$  tal que $vw \in L \\}$ 
     
     - Hay que notar que para cada $L: L \subseteq TAIL(L)$
     
