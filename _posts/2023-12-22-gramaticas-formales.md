@@ -183,7 +183,7 @@ Hay que notar que $\Rightarrow_{G}^{*}$ denota la *reflexive transitive closure*
  **Definición 4** El lenguaje generado por una gramática se define como:
  
 
-$L(G) = \{W: S \Rightarrow_{G}^{\*} w$   y $w \in T^{\*} \}$
+$L(G) = \\{W: S \Rightarrow_{G}^{\*} w$  y $w \in T^{\*} \\}$
 
 (2) Sea $G = (N, T, S, P)$ una gramática tal que: 
 
@@ -201,13 +201,13 @@ $L(G) = \\{a^nb^nc^n: n \geq 1 \\}$
 ## Referencia en bibtex: 
 
 ```{=latex}
-@incollection{becerra-bonache_207mathematical_2022,
-  title = {207Mathematical Foundations: Formal Grammars and Languages},
+@incollection{becerra-bonache_mathematical_2022,
+  title = {Mathematical Foundations: Formal Grammars and Languages},
   booktitle = {The Oxford Handbook of Computational Linguistics},
   publisher = {Oxford University Press},
   author = {Becerra-Bonache, Leonor and Bel-Enguix, Gemma and Jiménez-López, M. Dolores and Martín-Vide, Carlos},
   editor = {Mitkov, Ruslan},
-  date = {2022-06},
+  date = {2022},
   doi = {10.1093/oxfordhb/9780199573691.013.021},
   note = {\_eprint: https://academic.oup.com/book/0/chapter/358148992/chapter-pdf/45719689/oxfordhb-9780199573691-e-021.pdf},
 }
