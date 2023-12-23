@@ -44,9 +44,9 @@ $V$ = **alfabeto** o vocabulario es un **conjunto finito de letras** o símbolos
 
 $V^\*$  = Se obtiene al haber concatenado los símbolos de $V$, es un **conjunto infinito de cadenas** ($w$, *strings*)  o **palabras** (*words*). 
 
-$\lambda$ = es la **cadena vacía** y no contiene letras (*letters*). Además, es el elemento unidad de $V\*$ bajo la operación de concatenación. 
+$\lambda$ = es la **cadena vacía** y no contiene letras (*letters*). Además, es el elemento unidad de $V\^*$ bajo la operación de concatenación. 
 
-— **operación concatenación de una cadena**: es una operación asociativa y no conmutativa que cierra (se incluye) *V**, es decir: 
+— **operación concatenación de una cadena**: es una operación asociativa y no conmutativa que cierra (se incluye) $V\^*$, es decir: 
 
  para todo $w,v  \in V^* : wv \in V^*$  
 
