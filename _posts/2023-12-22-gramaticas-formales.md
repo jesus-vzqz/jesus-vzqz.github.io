@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Resumen de Gramáticas y lenguajes formales
+usemathjax: true
 ---
 
 
