@@ -40,23 +40,23 @@ Leonor Becerra-Bonache, Gemma Bel-Enguix, M. Dolores Jiménez-López, Carlos Ma
 
 # 1. Conceptos básicos: Alfabetos, cadenas y lenguajes
 
-*V* = **alfabeto** o vocabulario es un **conjunto finito de letras** o símbolos (v, *letters*).
+$V$ = **alfabeto** o vocabulario es un **conjunto finito de letras** o símbolos ($v$, *letters*).
 
-*V**  = Se obtiene al haber concatenado los símbolos de *V,* es un **conjunto infinito de cadenas** (*w*, *strings*)  o **palabras** (*words*). 
+$V\*$  = Se obtiene al haber concatenado los símbolos de $V$, es un **conjunto infinito de cadenas** ($w$, *strings*)  o **palabras** (*words*). 
 
-*λ* = es la **cadena vacía** y no contiene letras (*letters*). Además, es el elemento unidad de *V** bajo la operación de concatenación. 
+$\lambda$ = es la **cadena vacía** y no contiene letras (*letters*). Además, es el elemento unidad de $V\*$ bajo la operación de concatenación. 
 
 — **operación concatenación de una cadena**: es una operación asociativa y no conmutativa que cierra (se incluye) *V**, es decir: 
 
  para todo $w,v  \in V^* : wv \in V^*$  
 
-La **longitud (*length, cardinalidad* ) de una cadena** *w,* denotada por *|w|*, es el número de letras de que consiste la cadena.
+La **longitud (*length, cardinalidad* ) de una cadena** $w$, denotada por $\\vert w\\vert $, es el número de letras de que consiste la cadena.
 
 Ejemplo:
 
- $|λ| = 0$ 
+ - $\\vert \lambda   \\vert  = 0$,
 
- $|wv| = |w| + |v|$
+ - $\\vert wv \\vert  = \\vert  w \vert  + \\vert  v \\vert$
 
 $w =$ es una **subcadena** (*substring*) o **subpalabra** (*subword*) de *v* si y solo si existe $u_1,u_2$ tal que $v = u_1wu_2$
 
@@ -108,7 +108,7 @@ si $w = a_{1}a_{2} ... a_n$, entonces su imagen espejo (*mirror image or reversa
     
     **Clausura de iteración: estrella de Kleene** (*closure of the iteration: Kleene star*):
     
-    $$L^\* = \bigcup_{i \geq 0} L^i$$
+    $$L^{\*} = \bigcup_{i \geq 0} L^i$$
 
 
     **Clausura positiva de la iteración: Kleene plus** (*positive closure of the iteration*):
