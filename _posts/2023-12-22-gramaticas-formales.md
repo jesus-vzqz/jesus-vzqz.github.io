@@ -42,7 +42,7 @@ Leonor Becerra-Bonache, Gemma Bel-Enguix, M. Dolores Jiménez-López, Carlos Ma
 
 $V$ = **alfabeto** o vocabulario es un **conjunto finito de letras** o símbolos ($v$, *letters*).
 
-$V\*$  = Se obtiene al haber concatenado los símbolos de $V$, es un **conjunto infinito de cadenas** ($w$, *strings*)  o **palabras** (*words*). 
+$V^\*$  = Se obtiene al haber concatenado los símbolos de $V$, es un **conjunto infinito de cadenas** ($w$, *strings*)  o **palabras** (*words*). 
 
 $\lambda$ = es la **cadena vacía** y no contiene letras (*letters*). Además, es el elemento unidad de $V\*$ bajo la operación de concatenación. 
 
@@ -178,7 +178,7 @@ si $w = a_{1}a_{2} ... a_n$, entonces su imagen espejo (*mirror image or reversa
  **Definición 3** Dado que $G = (N, T, S, P)$ y $w, v \in (N \cup T)^\*$, una **derivación** $w \Rightarrow_{G}^{\*}v$ se lleva a cabo si y solo si existe tanto $w = v$ como $z \in (N \cup T)^\*$  tal que $w \Rightarrow_{G}^{\*} z$ y $z \Rightarrow _{G} v$.
 
 
-Hay que notar que $\Rightarrow_{G}^{*}$ denota la *reflexive transitive closure* y $\Rightarrow_{G}^{+}$ la *transitive closure,* respectivamente de $\Rightarrow_{G^{\cdot}}$
+Hay que notar que $\Rightarrow_{G}^{\*}$ denota la *reflexive transitive closure* y $\Rightarrow_{G}^{+}$ la *transitive closure*, respectivamente de $\Rightarrow_{G^{\cdot}}$
 
  **Definición 4** El lenguaje generado por una gramática se define como:
  
