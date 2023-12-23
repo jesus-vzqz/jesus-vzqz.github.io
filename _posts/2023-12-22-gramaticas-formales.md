@@ -108,7 +108,7 @@ si $w = a_{1}a_{2} ... a_n$, entonces su imagen espejo (*mirror image or reversa
     
     **Clausura de iteración: estrella de Kleene** (*closure of the iteration: Kleene star*):
     
-    $$L^{\*} = \bigcup_{i \geq 0} L^i$$
+    $$L^{*} = \bigcup_{i \geq 0} L^i$$
 
 
     **Clausura positiva de la iteración: Kleene plus** (*positive closure of the iteration*):
