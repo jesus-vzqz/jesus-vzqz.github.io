@@ -6,7 +6,7 @@ title: Ejemplo de glosas en LaTeX
 
 # Algunas consideraciones sobre los ejemplos
 
-Los siguientes ejemplos de glosas fueron extraídos Conti (2020). Los paquetes que se utilizaron fueron `philex` para la numeración y `tipa` para las glosas. 
+Los siguientes ejemplos de glosas fueron extraídos del libro de Conti (2020). Los paquetes que se utilizaron fueron `philex` para la numeración y `tipa` para las glosas. 
 
 ```{=latex} 
 
