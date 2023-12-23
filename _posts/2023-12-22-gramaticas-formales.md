@@ -145,7 +145,7 @@ si $w = a_{1}a_{2} ... a_n$, entonces su imagen espejo (*mirror image or reversa
     
     - A morphism is called $\lambda$-free if, for every $w \in V_{1}^{*}$, if $w \neq \lambda$  then $h(w) \neq \lambda$
     
-    **Morphic image**: $h(L) = \{v \in V_2^*: v = h(w)$, para algún $w \in L\}$
+    **Morphic image**: $h(L) = \\{v \in V_2^\*: v = h(w)$, para algún $w \in L \\}$
     
     Un morfismo se llama un **isomorfismo** si, para cada $w,u \in V_1^*$, si $h(w) = h(u)$ entonces $w = u$
     
@@ -154,10 +154,8 @@ si $w = a_{1}a_{2} ... a_n$, entonces su imagen espejo (*mirror image or reversa
     $h(0) = 0000, h(1) = 0001, ..., h(9) = 1001$
     
 
-<aside>
 💡 La unión, la concatenación y la estrella de Kleen son denominadas operaciones regulares (Becerra-Bonache et al., 2022, pág. 209).
 
-</aside>
 
 ## 3. Gramáticas
 
@@ -166,35 +164,56 @@ si $w = a_{1}a_{2} ... a_n$, entonces su imagen espejo (*mirror image or reversa
 
 </aside>
 
-> **Definición 1** Una gramática (formal) es una construcción $G = (N, T, S, P)$, donde
-> 
+**Definición 1** Una gramática (formal) es una construcción $G = (N, T, S, P)$, donde
+ 
 - $N$ es un **alfabeto no-terminal**,
 - $T$ es un **alfabeto terminal**,
-- $N \cap T = \empty$,
+- $N \cap T = \\emptyset $,
 - $S$ es la **letra inicial** (*initial letter*) o **axioma**, $S \in N$,
 - $P$ es el conjunto de **reglas de reescritura** o **producciones**. $P$ es un conjunto finito de pares $(w, v)$ tal que $w, v \in (N \cup T)^*$ y $w$  contiene al menos una letra de $N$. $(w, v)$  usualmente se escribe como  $w \rightarrow v$.
 
-> **Definición 2** Dado que $G = (N, T , S , P)$ y $w, v \in (N \cup T)^*$, una **derivación inmediata** o **directa** (en un paso) $w \Rightarrow_{G} v$ se lleva a cabo (*holds*) si y solo si: (i)  existe $u_1, u_2 \in (N \cup T)^*$ tal que $w = u_1\alpha u_2$ y $v = u_1\beta u_2$, y (ii) existe un $\alpha \longrightarrow \beta \in P$
-> 
+**Definición 2** Dado que $G = (N, T , S , P)$ y $w, v \in (N \cup T)^\*$, una **derivación inmediata** o **directa** (en un paso) $w \Rightarrow_{G} v$ se lleva a cabo si y solo si: (i)  existe $u_1, u_2 \in (N \cup T)^\*$ tal que $w = u_1\alpha u_2$ y $v = u_1\beta u_2$, y (ii) existe un $\alpha \longrightarrow \beta \in P$
 
-> **Definición 3** Dado que $G = (N, T, S, P)$ y $w, v \in (N \cup T)^*$, una **derivación** $w \Rightarrow_{G}^{*}v$ se lleva a cabo si y solo si existe tanto $w = v$ como $z \in (N \cup T)^*$  tal que $w \Rightarrow_{G}^{*} z$ y $z \Rightarrow _{G} v$.
-> 
+
+ **Definición 3** Dado que $G = (N, T, S, P)$ y $w, v \in (N \cup T)^\*$, una **derivación** $w \Rightarrow_{G}^{\*}v$ se lleva a cabo si y solo si existe tanto $w = v$ como $z \in (N \cup T)^\*$  tal que $w \Rightarrow_{G}^{\*} z$ y $z \Rightarrow _{G} v$.
+
 
 Hay que notar que $\Rightarrow_{G}^{*}$ denota la *reflexive transitive closure* y $\Rightarrow_{G}^{+}$ la *transitive closure,* respectivamente de $\Rightarrow_{G^{\cdot}}$
 
-> **Definición 4** El lenguaje generado por una gramática se define como:
-> 
+ **Definición 4** El lenguaje generado por una gramática se define como:
+ 
 
-$L(G) = \{W: S \Rightarrow_{G}^{*} w$   y $w \in T^{*} \}$
+$L(G) = \{W: S \Rightarrow_{G}^{\*} w$   y $w \in T^{\*} \}$
 
 (2) Sea $G = (N, T, S, P)$ una gramática tal que: 
 
-$N = \{S, A, B\}$,
+$N = \\{S, A, B \\}$,
 
-$T = \{a, b, c\}$,
+$T = \\{a, b, c \\}$,
 
-$P = \{S \rightarrow abc, S \rightarrow aAbc, Ab \rightarrow bA, Ac \rightarrow Bbcc, bB \rightarrow Bb, aB \rightarrow aaA, aB \rightarrow aa \}$ 
+$P = \\{S \rightarrow abc, S \rightarrow aAbc, Ab \rightarrow bA, Ac \rightarrow Bbcc, bB \rightarrow Bb, aB \rightarrow aaA, aB \rightarrow aa \\}$ 
 
 El lenguaje que se genera por $G$ es el siguiente: 
 
-$L(G) = \{a^nb^nc^n: n \geq 1\}$
+$L(G) = \\{a^nb^nc^n: n \geq 1 \\}$
+
+
+## Referencia en bibtex: 
+
+```{=latex}
+@incollection{becerra-bonache_207mathematical_2022,
+  title = {207Mathematical Foundations: Formal Grammars and Languages},
+  booktitle = {The Oxford Handbook of Computational Linguistics},
+  publisher = {Oxford University Press},
+  author = {Becerra-Bonache, Leonor and Bel-Enguix, Gemma and Jiménez-López, M. Dolores and Martín-Vide, Carlos},
+  editor = {Mitkov, Ruslan},
+  date = {2022-06},
+  doi = {10.1093/oxfordhb/9780199573691.013.021},
+  note = {\_eprint: https://academic.oup.com/book/0/chapter/358148992/chapter-pdf/45719689/oxfordhb-9780199573691-e-021.pdf},
+}
+
+```
+
+## Referencia en APA
+
+Becerra-Bonache, L., Bel-Enguix, G., Jiménez-López, M. D., & Martín-Vide, C. (2022). Mathematical Foundations: Formal Grammars and Languages. En R. Mitkov (Ed.), *The Oxford Handbook of Computational Linguistics*. Oxford University Press. https://doi.org/10.1093/oxfordhb/9780199573691.013.0211
