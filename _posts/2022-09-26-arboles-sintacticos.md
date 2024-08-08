@@ -7,13 +7,13 @@ title: Árboles sintácticos
 
 # 1. Introducción
 
-LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamiento de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de escritos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica en generar, p. ej., diagramas de flujo, grafos, árboles de decisión, automátas, etc. a través de gráficos vectoriales (`PGF/TikZ`) y complejas fórmulas matemáticas gracias a su **modo matemático**. 
+LaTeX es un lenguaje de marcado --basado en TeX-- que se usa para el procesamiento de textos científicos con una alta calidad tipográfica. Aunque nos permite crear una multiplicidad de escritos como lo son artículos, libros, presentaciones, cartas, etc., su poder radica en generar, p. ej., diagramas de flujo, grafos, árboles de decisión, autómatas, etc. a través de gráficos vectoriales (`PGF/TikZ`) y complejas fórmulas matemáticas gracias a su **modo matemático**. 
 
-¡LaTeX es una herramienta versátil!, ya que cuenta con una sinfinidad de paquetes que siempre se ajustan a nuestras necesidades.
+¡LaTeX es una herramienta versátil!, ya que cuenta con una infinidad de paquetes que siempre se ajustan a nuestras necesidades.
 
 En el caso de la lingüística, resulta muy útil porque existen un conjunto de paquetes que nos permiten escribir símbolos fonéticos (con `tipa`), glosas (con `gb4e` o `covington`), enumeración de ejemplos (con `gb4e`,  `ling-macros`, `linguex` o `philex` ), estructuras de representación del discurso (con `drs`), árboles de dependencia (con `TikZ-dependency`) y árboles sintácticos de constituyentes (con `xyling`, `xy`, `tikz-qtree` o `forest`), etc. Como podemos observar mucha gente ha dedicado tiempo y esfuerzo para crear estos paquetes lingüísticos, cabría que considerar si el aprendizaje y el uso de estos formaría parte complementaría dentro de nuestra formación profesional como lingüistas. ¡Yo pienso que sí! Incluso el aprendizaje de cosas nuevas siempre puede resultarnos satisfactorio.
 
-A lo largo de este *post*, nos enfocaremos en explicar algunas maneras en las que podemos dibujar árboles sintácticos con `forest` porque pensamos que es un paquete bastante intuitivo para la elaboración de representaciones árboreas. Además, para lograr este objetivo, consideraremos que el lector ya cuenta con algunos conocimientos básicos en el uso LaTeX; si este no es el caso existen muy buenos manuales en internet. 
+A lo largo de este *post*, nos enfocaremos en explicar algunas maneras en las que podemos dibujar árboles sintácticos con `forest` porque pensamos que es un paquete bastante intuitivo para la elaboración de representaciones arbóreas. Además, para lograr este objetivo, consideraremos que el lector ya cuenta con algunos conocimientos básicos en el uso LaTeX; si este no es el caso existen muy buenos manuales en internet. 
 
 Añado un curso en GitHub (no es el único) que posiblemente pueda interesar:
 
@@ -40,7 +40,7 @@ Una cuestión importante que debemos tomar en cuenta para el futuro es que al mo
 
 ```
 
-Esto nos mantendrá prevenidos de futuros errores que puedan resultarnos frustantes. Muy bien, ahora, dentro del cuerpo de nuestro documento, llamaremos al ambiente de `forest`. En este punto, veremos que la sintaxis básica de este paquete consiste en usar corchetes para anidar otros corchetes. ¡Así de fácil! Como observamos en el siguiente ejemplo, el corchete más grande tiene en su inicio un **1**, que corresponde a la posición del nodo madre, y anida otros dos corchetes con sus respectivos números: **2** y **3**, que son los nodos hermanos. 
+Esto nos mantendrá prevenidos de futuros errores que puedan resultarnos frustrantes. Muy bien, ahora, dentro del cuerpo de nuestro documento, llamaremos al ambiente de `forest`. En este punto, veremos que la sintaxis básica de este paquete consiste en usar corchetes para anidar otros corchetes. ¡Así de fácil! Como observamos en el siguiente ejemplo, el corchete más grande tiene en su inicio un **1**, que corresponde a la posición del nodo madre, y anida otros dos corchetes con sus respectivos números: **2** y **3**, que son los nodos hermanos. 
 
 
 ```{=latex}
@@ -90,7 +90,7 @@ Si hemos comprendido esto, ya estamos a la mitad del camino para construir diagr
 
 ## 1.2. Creando el esquema X-barra
 
-Daremos un paso más allá y trataremos de dibujar el esquema de X-barra. Lo primero que debemos de saber es que temos una proyección máxima **SX**, que domina dos nodos: **SY** y **X'**. Hay que recordar que el primero es la posición del especificador y el segundo, de la proyección intermedia. Además, tenemos una proyección intermedia **X'**  que domina dos nodos: el núcleo sobre el cuál se proyecta toda la estructura **X<sup>0</sup>** y el complemento **SZ**. De todo esto, primero, podemos empeñarnos en construir la parte de arriba:
+Daremos un paso más allá y trataremos de dibujar el esquema de X-barra. Lo primero que debemos de saber es que tenemos una proyección máxima **SX**, que domina dos nodos: **SY** y **X'**. Hay que recordar que el primero es la posición del especificador y el segundo, de la proyección intermedia. Además, tenemos una proyección intermedia **X'**  que domina dos nodos: el núcleo sobre el cuál se proyecta toda la estructura **X<sup>0</sup>** y el complemento **SZ**. De todo esto, primero, podemos empeñarnos en construir la parte de arriba:
 
 ```{=latex}
 
@@ -107,9 +107,9 @@ Daremos un paso más allá y trataremos de dibujar el esquema de X-barra. Lo pri
 \end{document}
 ```
 
-Puede resultar un poco confuso este segmento de código, pero, con el fin de enumerar nuestro esquema, solamente  hemos añadido un ambiente del paquete `philex`. Expliquemos un poco este ámbiente `lb{}{}`: dentro de las primera llaves `{}` escribimos un identificador de nuestro ejemplo, para usarlo más tarde en alguna referencias cruzadas a lo largo del escrito de nuestro texto y tener control de ellos; yo he utilizado `ejemploxbar1`, pero puede llevar cualquier otro que deseen. En las segundas llaves, hemos anidado el ambiente de `forest`. 
+Puede resultar un poco confuso este segmento de código, pero, con el fin de enumerar nuestro esquema, solamente  hemos añadido un ambiente del paquete `philex`. Expliquemos un poco este ambiente `lb{}{}`: dentro de las primera llaves `{}` escribimos un identificador de nuestro ejemplo, para usarlo más tarde en alguna referencias cruzadas a lo largo del escrito de nuestro texto y tener control de ellos; yo he utilizado `ejemploxbar1`, pero puede llevar cualquier otro que deseen. En las segundas llaves, hemos anidado el ambiente de `forest`. 
 
-En cuanto al encorchetado dentro de este ámbiente, observamos que el corchete principal, el más externo **SX**, contiene otros dos: **SX** y **X'**. Después de compilarlo, obtenemos el siguiente resultado:
+En cuanto al encorchetado dentro de este ambiente, observamos que el corchete principal, el más externo **SX**, contiene otros dos: **SX** y **X'**. Después de compilarlo, obtenemos el siguiente resultado:
 
 
 <img src = "/images/post_1/ejemplo4.png" width = "500" height = "300" alt = "Cuarto ejemplo">
@@ -134,7 +134,7 @@ Como podemos observar, nuestro esquema de X-barra sigue incompleto falta añadir
 
 <!--- ![Quinto ejemplo](/images/post_1/ejemplo5.png) -->
 
-Antes de terminar este apartado, me gustaría señalar que algunas veces tenemos que dibujar diagramas mucho más complejos, por lo que va a llegar un momento en el que resultará complicado manejar todo el encorchetado. Para evitar esto, eso se recomiendo separar en cada linea por niveles los segmentos más importantes de nuestro árbol con sangrías y alinear el corchete de cierre al final con el de apertura. Todo esto no modificará el resultado, pero nos ayudará prevenir muchos posibles errores.
+Antes de terminar este apartado, me gustaría señalar que algunas veces tenemos que dibujar diagramas mucho más complejos, por lo que va a llegar un momento en el que resultará complicado manejar todo el encorchetado. Para evitar esto, eso se recomiendo separar en cada línea por niveles los segmentos más importantes de nuestro árbol con sangrías y alinear el corchete de cierre al final con el de apertura. Todo esto no modificará el resultado, pero nos ayudará prevenir muchos posibles errores.
 
 
 ```{=latex}
@@ -151,7 +151,7 @@ Antes de terminar este apartado, me gustaría señalar que algunas veces tenemos
 
 ## 1.3. Proyecciones intermedias
 
-La utilidad de las proyecciones intermedias es que nos permiten justificar la posición de los adjuntos que ocurren en una construcción sintáctica, además de que son recursivas, es decir, pueden proyectarse más de una vez dentro de la estructura arborea. En el caso de la nuestra, no tomamos en cuenta esta proyección, pero ya es hora. Lo que tenemos que hacer es anidar en nuestra proyección intermedia otra proyección con la misma etiqueta más la posición de adjunto. Esta nueva proyección intermedia albergará otro que su vez incluirá el núcleo y la posición de sujeto.     
+La utilidad de las proyecciones intermedias es que nos permiten justificar la posición de los adjuntos que ocurren en una construcción sintáctica, además de que son recursivas, es decir, pueden proyectarse más de una vez dentro de la estructura arbórea. En el caso de la nuestra, no tomamos en cuenta esta proyección, pero ya es hora. Lo que tenemos que hacer es anidar en nuestra proyección intermedia otra proyección con la misma etiqueta más la posición de adjunto. Esta nueva proyección intermedia albergará otro que su vez incluirá el núcleo y la posición de sujeto.     
 
 ```{=latex}
 
@@ -216,9 +216,9 @@ Para construir el árbol anterior, debemos de seguir los pasos previamente prese
 \end{forest}}}
 ```
 
-En este caso, observamos cómo en el nodo correspondiente a `[v'[tosió, name = 2]` hemos indicado después de la coma `,` un parametro `name =2` en el que expresamos la etiqueta de este, llamándolo `2` (podría escribirse cualquier otro nombrae, p. ej., `núcleo2` o `posición2`). Dentro del mismo ambiente de `forest`, notamos cómo en el nodo de `[SV [\sout{tosió}, name = 1][X]]]`  asignamos `1`. Estas dos etiquetas son importantes porque nos van a ayudar a dirigir la dirección de nuestras flechas. 
+En este caso, observamos cómo en el nodo correspondiente a `[v'[tosió, name = 2]` hemos indicado después de la coma `,` un parámetro `name =2` en el que expresamos la etiqueta de este, llamándolo `2` (podría escribirse cualquier otro nombre, p. ej., `núcleo2` o `posición2`). Dentro del mismo ambiente de `forest`, notamos cómo en el nodo de `[SV [\sout{tosió}, name = 1][X]]]`  asignamos `1`. Estas dos etiquetas son importantes porque nos van a ayudar a dirigir la dirección de nuestras flechas. 
 
-Despúes de terminar el encorchetado de nuestro árbol sintáctico, podemos comenzar a dibujar las flechas que indican el movimiento sintáctico, para eso hacemos uso del comandoo de `tikz` `\draw[]`. Con este comando podemos especificar la dirección de la punta que queremos dibujar -- p. ej.,`\draw[->]`, `\draw[<-]`, `\draw[<->]`-- hasta el punto de inicio y final de la flecha `(1) to[out=south,in=south] (2)`, es decir, la cola de la flecha `(1)` se va a dirigir a `(2)`, la salida (`out = south`) será al sur y la llegada de la punta (`in = south`) será al sur. 
+Después de terminar el encorchetado de nuestro árbol sintáctico, podemos comenzar a dibujar las flechas que indican el movimiento sintáctico, para eso hacemos uso del comando de `tikz` `\draw[]`. Con este comando podemos especificar la dirección de la punta que queremos dibujar -- p. ej.,`\draw[->]`, `\draw[<-]`, `\draw[<->]`-- hasta el punto de inicio y final de la flecha `(1) to[out=south,in=south] (2)`, es decir, la cola de la flecha `(1)` se va a dirigir a `(2)`, la salida (`out = south`) será al sur y la llegada de la punta (`in = south`) será al sur. 
 
 ```{=latex}
 \draw[->] (1) to[out=south,in=south] (2);
@@ -323,7 +323,7 @@ De este modo, en la línea de `\draw[->] (objetivo3) to[out= -110, in= -122] (ob
 
 ## Otro ejemplo
 
-Tómado de López Palma (2016):
+Tomado de López Palma (2016):
 ```{=latex}
 \begin{forest}
     [$\lambda x \lambda y.y$ quiere $x_{\langle e, et \rangle}$
@@ -346,7 +346,7 @@ Tómado de López Palma (2016):
 
 ## Bibliografía
 
-### En formato Bibtex: 
+### En formato BibTex: 
 
 ```{=latex}
 
