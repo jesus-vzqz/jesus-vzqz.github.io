@@ -22,13 +22,14 @@ body {
   background: $darkGray; // Fondo oscuro
   font: 18px/1.4 $helvetica;
   color: $white; // Texto blanco
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  margin: 0 auto;
   max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem; // Espaciado lateral
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -265,34 +266,28 @@ nav {
 // .main
 //
 
+.posts {
+  margin-top: 3rem; // Espacio entre el encabezado y los posts
+  margin-bottom: 3rem; // Espacio entre los posts y el pie de página
+}
+
 .posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $darkGray; // Cambio para tema oscuro
-}
+  margin-bottom: 2rem; // Espacio entre posts individuales
+  padding: 1rem;
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
-
-.post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
+  h2 {
+    margin-bottom: 0.5rem;
   }
 
-  .comments {
-    margin-top: 10px;
+  .post-date {
+    margin-bottom: 0.5rem;
+    color: $gray;
   }
 
   .read-more {
-    color: $blue; // Enlace azul
+    margin-top: 0.5rem;
+    color: $blue;
     text-decoration: none;
-    font-size: 15px;
 
     &:hover {
       text-decoration: underline;
