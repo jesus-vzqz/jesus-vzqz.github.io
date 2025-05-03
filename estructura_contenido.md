@@ -1,5 +1,7 @@
 ---
+layout: page
 title: Portafolio | Jesús Vázquez Luna
+permalink: /proyectos/portafolio/
 ---
 
 ## 1. LaTeX para lingüistas
@@ -7,7 +9,7 @@ title: Portafolio | Jesús Vázquez Luna
 - Ejemplos de glosas en LaTeX
 
 ## 2. Herramientas de PLN
-- Intalación y uso de Stanza en Termux
+- Instalación y uso de Stanza en Termux
 
 ### 2.1 Dependencias universales (Universal Dependencies):
 - Etiquetario POS de Dependencias Universales
