@@ -276,7 +276,6 @@ nav {
 .posts > .post {
   margin-bottom: 2rem; // Espacio entre posts individuales
   padding: 1rem;
-  counter-reset: section; /* Reinicia el contador de secciones */
 
   h2 {
     margin-bottom: 0.5rem;
