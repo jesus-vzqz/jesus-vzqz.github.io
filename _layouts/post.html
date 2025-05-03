@@ -3,15 +3,28 @@ layout: default
 ---
 
 <article class="post">
-  <h1>{{ page.title }}</h1>
+  <!-- Título Principal -->
+  <header class="post-header">
+    <h1>{{ page.title }}</h1>
+    <div class="post-meta">
+      <span>Publicado el {{ page.date | date: "%B %e, %Y" }}</span>
+      {% if page.author %}
+        <span>por {{ page.author }}</span>
+      {% endif %}
+    </div>
+  </header>
 
-  <div class="entry">
+  <!-- Contenido del Post -->
+  <div class="post-content">
     {{ content }}
   </div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
+  <!-- Fecha y Autor -->
+  <footer class="post-footer">
+    <div class="post-date">
+      Escrito el {{ page.date | date: "%B %e, %Y" }}
+    </div>
+  </footer>
 
-  {% include disqus.html %}
+
 </article>
