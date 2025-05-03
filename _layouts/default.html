@@ -1,70 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Título Dinámico -->
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-       
-    <!-- Inicio de MathJax -->
 
+    <!-- Meta Tags -->
+    {% include meta.html %}
+
+    <!-- Soporte para MathJax -->
     <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      processEscapes: true
-    }
-  });
-</script>
-
-      
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          processEscapes: true
+        }
+      });
+    </script>
     <script type="text/javascript" async
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
 
-  
-    
-    <!-- Fin de MathJax -->
-    {% include meta.html %}
-
+    <!-- Fallback para navegadores antiguos -->
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <!-- Hoja de Estilos -->
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+    <!-- Feed RSS -->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   </head>
 
   <body>
-    <div class="wrapper-masthead">
+    <!-- Encabezado -->
+    <header class="site-header">
       <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
+        <div class="site-info">
+          <a href="{{ site.baseurl }}/" class="site-avatar">
+            <img src="{{ site.avatar }}" alt="{{ site.name }}" />
+          </a>
+          <div class="site-details">
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
+        </div>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
+        <!-- Menú de Navegación -->
+        <nav class="site-nav">
+          <a href="{{ site.baseurl }}/">Blog</a>
+          <a href="{{ site.baseurl }}/about">Acerca de</a>
+          <a href="{{ site.baseurl }}/portafolio">Portafolio</a>
+          <a href="{{ site.baseurl }}/recursos">Recursos</a>
+        </nav>
       </div>
-    </div>
+    </header>
 
-    <div id="main" role="main" class="container">
+    <!-- Contenido Principal -->
+    <main id="main" role="main" class="container">
       {{ content }}
-    </div>
+    </main>
 
-    <div class="wrapper-footer">
+    <!-- Pie de Página -->
+    <footer class="site-footer">
       <div class="container">
-        <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; {{ site.time | date: '%Y' }} {{ site.name }}. Todos los derechos reservados.</p>
           {% include svg-icons.html %}
-        </footer>
+        </div>
       </div>
-    </div>
+    </footer>
 
+    <!-- Google Analytics -->
     {% include analytics.html %}
   </body>
 </html>
