@@ -4,13 +4,23 @@ layout: default
 
 <div class="page-content">
   <article class="page">
-    <!-- Título Principal -->
-    <header>
+    <!-- Encabezado -->
+    <header class="page-header">
       <h1>{{ page.title }}</h1>
+      {% if page.author or page.date %}
+        <div class="page-meta">
+          {% if page.author %}
+            <span>Por {{ page.author }}</span>
+          {% endif %}
+          {% if page.date %}
+            <span>Publicado el {{ page.date | date: "%B %e, %Y" }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
     </header>
 
-    <!-- Contenido de la Página -->
-    <div class="content">
+    <!-- Contenido Principal -->
+    <div class="page-body">
       {{ content }}
     </div>
   </article>
