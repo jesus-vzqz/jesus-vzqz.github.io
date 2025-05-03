@@ -7,6 +7,7 @@
 
 @import "reset";
 @import "variables";
+
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -18,9 +19,9 @@ html {
 }
 
 body {
-	background: $lightGray;
+  background: $darkGray; // Fondo oscuro
   font: 18px/1.4 $helvetica;
-  color: $darkGray;
+  color: $white; // Texto blanco
 }
 
 .container {
@@ -32,7 +33,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: $orange; // Títulos naranjas brillantes
   font-weight: bold;
 
   line-height: 1.7;
@@ -52,10 +53,28 @@ h1 {
 }
 
 h2 {
+  counter-increment: section; // Numeración automática para <h2>
+  position: relative;
+
+  &::before {
+    content: counter(section) ". "; // Agrega el número antes del título
+    font-weight: bold;
+    color: $orange;
+  }
+
   font-size: 24px;
 }
 
 h3 {
+  counter-increment: subsection; // Numeración automática para <h3>
+  position: relative;
+
+  &::before {
+    content: counter(section) "." counter(subsection) " "; // Formato "1.1", "1.2", etc.
+    font-weight: bold;
+    color: $orange;
+  }
+
   font-size: 20px;
 }
 
@@ -69,11 +88,12 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $blue; // Enlaces azules
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
+
   &:hover, &:active {
-    color: $blue;
+    color: lighten($blue, 10%); // Resaltado al pasar el cursor
   }
 }
 
@@ -134,12 +154,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
@@ -156,7 +176,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $darkGray; // Cambio para tema oscuro
 
   @include mobile {
     text-align: center;
@@ -176,7 +196,7 @@ img {
   }
 
   img {
-    border-radius: 5px;
+    border-radius: 50%; // Avatar redondeado
   }
 }
 
@@ -192,7 +212,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $darkGray;
+  color: $orange; // Cambio para tema oscuro
   cursor: pointer;
   font-family: $helveticaNeue;
   font-weight: 300;
@@ -225,7 +245,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $darkGray;
+    color: $white; // Cambio para tema oscuro
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
@@ -233,6 +253,10 @@ nav {
     @include mobile {
       margin: 0 10px;
       color: $blue;
+    }
+
+    &:hover {
+      color: $orange; // Cambio para tema oscuro
     }
   }
 }
@@ -243,7 +267,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid $darkGray; // Cambio para tema oscuro
 }
 
 .posts > .post:last-child {
@@ -266,21 +290,27 @@ nav {
   }
 
   .read-more {
-    text-transform: uppercase;
+    color: $blue; // Enlace azul
+    text-decoration: none;
     font-size: 15px;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  border-top: 1px solid $darkGray; // Cambio para tema oscuro
+  border-bottom: 1px solid $darkGray; // Cambio para tema oscuro
+  background-color: $darkGray; // Cambio para tema oscuro
 }
 
 footer {
   padding: 20px 0;
   text-align: center;
+  color: $gray; // Cambio para tema oscuro
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
