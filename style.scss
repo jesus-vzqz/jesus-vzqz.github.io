@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background: $darkGray; // Fondo oscuro
+  background: $dark; // Fondo oscuro
   font: 18px/1.4 $helvetica;
   color: $white; // Texto blanco
   margin: 0;
@@ -54,28 +54,10 @@ h1 {
 }
 
 h2 {
-  counter-increment: section; // Numeración automática para <h2>
-  position: relative;
-
-  &::before {
-    content: counter(section) ". "; // Agrega el número antes del título
-    font-weight: bold;
-    color: $orange;
-  }
-
   font-size: 24px;
 }
 
 h3 {
-  counter-increment: subsection; // Numeración automática para <h3>
-  position: relative;
-
-  &::before {
-    content: counter(section) "." counter(subsection) " "; // Formato "1.1", "1.2", etc.
-    font-weight: bold;
-    color: $orange;
-  }
-
   font-size: 20px;
 }
 
@@ -265,8 +247,6 @@ nav {
 //
 // .main
 //
-
-
 
 .posts {
   margin-top: 3rem; // Espacio entre el encabezado y los posts
