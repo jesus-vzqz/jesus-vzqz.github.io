@@ -1,8 +1,13 @@
 ---
 layout: post
-title: Árboles sintácticos
+title: Árboles sintácticos en LaTeX
+date: 2023-10-15
+categories: [lingüística, LaTeX]
+tags: [árboles sintácticos, gramática formal, LaTeX]
+author: Jesús Vázquez Luna
+excerpt: "En este artículo, exploraremos cómo crear árboles sintácticos utilizando LaTeX. Aprenderás las herramientas necesarias y los paquetes recomendados para representar estructuras lingüísticas."
+permalink: /posts/arboles-sintacticos/
 ---
-
 
 
 # 1. Introducción
